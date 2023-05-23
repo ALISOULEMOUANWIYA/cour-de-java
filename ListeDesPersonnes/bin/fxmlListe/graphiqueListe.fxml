@@ -1,0 +1,1820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPaneFenetre" prefHeight="656.0" prefWidth="900.0" stylesheets="@../fichierCssListe/StyleListeGraphique.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerFXMLListe.ListeController">
+   <children>
+      <AnchorPane fx:id="AnchorpaneOuvertureChoixTache" layoutX="3.0" layoutY="2.0" prefHeight="652.0" prefWidth="894.0" translateX="905.0">
+         <children>
+            <Pane layoutX="5.0" layoutY="5.0" prefHeight="35.0" prefWidth="99.0">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="43.0" layoutX="9.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_database_administrator_43px_1.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="nomDataBase" layoutX="38.0" layoutY="9.0" prefHeight="17.0" prefWidth="55.0" text="Label" />
+               </children>
+            </Pane>
+            <MenuBar id="menubareNavigation" fx:id="fileItembar" layoutX="110.0" layoutY="5.0" prefHeight="27.0" prefWidth="768.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close   Sesseion  ( CTRL + ALT+X )">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="CLOSE" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="refresheTableau" mnemonicParsing="false" onAction="#tableauRefresh" text="Refreshe table   ( ALT+CTRL+A )">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="REFRESH" />
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" style="-fx-background-color: black;" text="Copier  le fichier                 ( CTRL + C )">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/edit_property.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem disable="true" mnemonicParsing="false" text="Modifiér   le fichier             ( ALT+CTRL+A )">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="PENCIL" />
+                           </graphic>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem disable="true" mnemonicParsing="false" text="Suprimer La Selection        ( CTRL + X  )">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="TRASH" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Selection  CheckBo            ( CTRL + A )">
+                           <graphic>
+                              <JFXCheckBox fx:id="ActiverSelection" checkedColor="#00ff80" text="Activer" unCheckedColor="BLACK" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Utilisateur devellopeur      ( CTRL + ALT + D )">
+                           <graphic>
+                              <JFXCheckBox fx:id="ActiverSelectionDevellopeur" checkedColor="#00ff80" text="Activer" unCheckedColor="BLACK" />
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Pane id="PreBarreMenu" fx:id="HorrizontaleBarre2" layoutX="95.0" layoutY="40.0" prefHeight="35.0" prefWidth="793.0">
+               <children>
+                  <Button id="DirectionBarMenu" layoutX="4.0" layoutY="5.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="12.0">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                           <image>
+                              <Image url="@../Icons/arrow3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane id="PreBarreMenu" layoutX="38.0" prefHeight="35.0" prefWidth="717.0">
+                     <children>
+                        <Pane id="BarreMenuRotate" layoutX="30.0" prefHeight="35.0" prefWidth="624.0">
+                           <children>
+                              <MenuButton id="listeButtonBarMenu" layoutX="579.0" layoutY="4.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="40.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 2">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 3">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 4">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 5">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 6">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 7">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 8">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 9">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 10">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 11">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 12">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 13">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 14">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 15">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 16">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 17">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 18">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 19">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 20">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 21">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 22">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 23">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 24">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 25">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#9bb08d" glyphName="DATABASE" size="1.1em" />
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton id="listeButtonBarMenu" layoutX="526.0" layoutY="3.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="14.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/98834803738054656.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton id="listeButtonBarMenu" layoutX="475.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/preferences_system.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <Separator cache="true" layoutX="432.0" layoutY="3.0" mouseTransparent="true" opacity="0.32" orientation="VERTICAL" prefHeight="27.0" prefWidth="3.0" />
+                              <Separator cache="true" layoutX="358.0" layoutY="4.0" mouseTransparent="true" opacity="0.32" orientation="VERTICAL" prefHeight="27.0" prefWidth="3.0" />
+                              <Separator cache="true" layoutX="250.0" layoutY="4.0" mouseTransparent="true" opacity="0.32" orientation="VERTICAL" prefHeight="27.0" prefWidth="3.0" />
+                              <MenuButton id="listeButtonBarMenu" layoutX="252.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/spreadsheet.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton id="listeButtonBarMenu" layoutX="307.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/storage_files.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <Button id="listeButtonBarMenu" layoutX="361.0" layoutY="3.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/Back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="listeButtonBarMenu" layoutX="398.0" layoutY="2.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" rotate="158.7">
+                                       <image>
+                                          <Image url="@../Icons/Back.png" />
+                                       </image>
+                                       <rotationAxis>
+                                          <Point3D y="1.0" />
+                                       </rotationAxis>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="listeButtonBarMenu" layoutX="436.0" layoutY="3.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/web_database.png" />
+                                       </image>
+                                       <rotationAxis>
+                                          <Point3D y="1.0" />
+                                       </rotationAxis>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="listeButtonBarMenu" layoutX="184.0" layoutY="5.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="16.0">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/documents_folder_white.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="listeButtonBarMenu" layoutX="218.0" layoutY="4.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="27.0">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/preferences_composer.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <MenuButton id="listeButtonBarMenu" layoutX="137.0" layoutY="2.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="37.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/tab_new_raised.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                           </children>
+                        </Pane>
+                        <Button id="ListeMenu1" layoutX="3.0" layoutY="5.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon fill="#e48383" glyphName="HOME" />
+                           </graphic>
+                        </Button>
+                        <MenuButton id="ListeMenu2" layoutX="658.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Home  menu bar reglage         ( CTR+A ) ">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/home%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/home%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuButton>
+                     </children>
+                  </Pane>
+                  <Button id="DirectionBarMenu" layoutX="757.0" layoutY="5.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="12.0">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                           <image>
+                              <Image url="@../Icons/arrow3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane id="PreBarreMenu" fx:id="HorrizontaleBarre1" layoutX="95.0" layoutY="40.0" prefHeight="35.0" prefWidth="793.0">
+               <children>
+                  <JFXButton id="AjouterListe" fx:id="AjouterPersonne" buttonType="RAISED" layoutX="3.0" layoutY="4.0" onAction="#AjouterPersonne" onMouseClicked="#CloseDialogue" prefHeight="27.0" prefWidth="66.0" text="Ajouter">
+                     <graphic>
+                        <FontAwesomeIcon id="ajouterIcone" fill="WHITE" glyphName="DOWNLOAD" />
+                     </graphic>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </JFXButton>
+                  <Button id="DirectionBarMenu" layoutX="71.0" layoutY="5.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="12.0">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                           <image>
+                              <Image url="@../Icons/arrow3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane id="PreBarreMenu" layoutX="105.0" prefHeight="35.0" prefWidth="575.0">
+                     <children>
+                        <Button id="ListeMenu1" layoutX="3.0" layoutY="5.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon fill="#e48383" glyphName="HOME" />
+                           </graphic>
+                        </Button>
+                        <Pane id="BarreMenuRotate" layoutX="30.0" prefHeight="35.0" prefWidth="491.0">
+                           <children>
+                              <MenuButton id="listeButtonBarMenu" layoutX="447.0" layoutY="3.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="40.0">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Action 1">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                  <MenuItem mnemonicParsing="false" text="Action 2">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 3">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 4">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 5">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 6">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 7">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 8">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 9">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 10">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 11">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 12">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 13">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 14">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 15">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 16">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 17">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 18">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 19">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 20">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 21">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 22">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 23">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 24">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Action 25">
+                                       <graphic>
+                                          <FontAwesomeIcon />
+                                       </graphic>
+                                    </MenuItem>
+                                </items>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#9bb08d" glyphName="DATABASE" size="1.1em" />
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton id="listeButtonBarMenu" layoutX="396.0" layoutY="4.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="14.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/98834803738054656.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton id="listeButtonBarMenu" layoutX="344.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/preferences_system.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <Separator cache="true" layoutX="301.0" layoutY="3.0" mouseTransparent="true" opacity="0.32" orientation="VERTICAL" prefHeight="27.0" prefWidth="3.0" />
+                              <Separator cache="true" layoutX="227.0" layoutY="4.0" mouseTransparent="true" opacity="0.32" orientation="VERTICAL" prefHeight="27.0" prefWidth="3.0" />
+                              <Separator cache="true" layoutX="115.0" layoutY="4.0" mouseTransparent="true" opacity="0.32" orientation="VERTICAL" prefHeight="27.0" prefWidth="3.0" />
+                              <MenuButton id="listeButtonBarMenu" layoutX="122.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/spreadsheet.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton id="listeButtonBarMenu" layoutX="177.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/storage_files.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                              <Button id="listeButtonBarMenu" layoutX="231.0" layoutY="3.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/Back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="listeButtonBarMenu" layoutX="267.0" layoutY="2.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" rotate="158.7">
+                                       <image>
+                                          <Image url="@../Icons/Back.png" />
+                                       </image>
+                                       <rotationAxis>
+                                          <Point3D y="1.0" />
+                                       </rotationAxis>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="listeButtonBarMenu" layoutX="305.0" layoutY="3.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/web_database.png" />
+                                       </image>
+                                       <rotationAxis>
+                                          <Point3D y="1.0" />
+                                       </rotationAxis>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="listeButtonBarMenu" layoutX="49.0" layoutY="5.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="16.0">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/folder_documents.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="listeButtonBarMenu" layoutX="83.0" layoutY="4.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="27.0">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/preferences_composer.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <MenuButton id="listeButtonBarMenu" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="37.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/tab_new_raised.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuButton>
+                           </children>
+                        </Pane>
+                        <MenuButton id="ListeMenu2" layoutX="520.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Home  menu bar reglage         ( CTR+A ) ">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/home%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/home%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuButton>
+                     </children>
+                  </Pane>
+                  <Button id="DirectionBarMenu" layoutX="683.0" layoutY="5.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="12.0">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                           <image>
+                              <Image url="@../Icons/arrow3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <JFXButton id="preView" fx:id="PreView" buttonType="RAISED" layoutX="715.0" layoutY="5.0" onAction="#aficherRaport" prefHeight="25.0" prefWidth="75.0" text="Raport View">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="paneAide" layoutX="95.0" layoutY="83.0" prefHeight="483.0" prefWidth="793.0" style="-fx-background-color: white;" />
+            <Pane layoutX="5.0" layoutY="45.0" prefHeight="24.0" prefWidth="84.0">
+               <children>
+                  <Circle fx:id="CliquerButtonChangeMenuHirizontalBarre" fill="DODGERBLUE" layoutX="68.0" layoutY="11.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="CliquerButtonChangeMenuVerticaleBarre" fill="#1fff9b" layoutX="41.0" layoutY="11.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#fff01f" layoutX="14.0" layoutY="11.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane fx:id="VerticaleBarre2" layoutX="10.0" layoutY="83.0" prefHeight="489.0" prefWidth="75.0">
+               <children>
+                  <Button id="MenuButton" layoutX="12.0" layoutY="13.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="45.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="HOME" size="3em" />
+                     </graphic>
+                  </Button>
+                  <Button id="MenuButton" layoutX="11.0" layoutY="71.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="45.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="LIST" size="3em" />
+                     </graphic>
+                  </Button>
+                  <Button id="MenuButton" layoutX="11.0" layoutY="128.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="45.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="TH" size="3em" />
+                     </graphic>
+                  </Button>
+                  <Button id="MenuButton" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="45.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="COGS" size="3em" />
+                     </graphic>
+                  </Button>
+                  <Button id="MenuButton" layoutX="11.0" layoutY="242.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="52.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="QUESTION" size="3em" />
+                     </graphic>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button id="MenuButton" layoutX="11.0" layoutY="300.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="52.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="QUESTION" size="3em" />
+                     </graphic>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button id="MenuButton" layoutX="11.0" layoutY="356.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="52.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="QUESTION" size="3em" />
+                     </graphic>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button id="MenuButton" layoutX="11.0" layoutY="414.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="52.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="QUESTION" size="3em" />
+                     </graphic>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="VerticaleBarre1" layoutX="10.0" layoutY="83.0" prefHeight="489.0" prefWidth="75.0">
+               <children>
+                  <Button id="MenuButton" fx:id="MenuBouton" layoutX="12.0" layoutY="56.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="45.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="HOME" size="3em" />
+                     </graphic>
+                  </Button>
+                  <Button id="MenuButton" fx:id="ButtonLister" layoutX="11.0" layoutY="140.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="45.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="LIST" size="3em" />
+                     </graphic>
+                  </Button>
+                  <Button id="MenuButton" fx:id="buttonListerBox" layoutX="11.0" layoutY="222.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="45.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="TH" size="3em" />
+                     </graphic>
+                  </Button>
+                  <Button id="MenuButton" fx:id="buttonParametre" layoutX="10.0" layoutY="305.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="45.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="COGS" size="3em" />
+                     </graphic>
+                  </Button>
+                  <Button id="MenuButton" fx:id="buttonAide" layoutX="11.0" layoutY="391.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="52.0">
+                     <graphic>
+                        <FontAwesomeIcon id="identMenu" fill="WHITE" glyphName="QUESTION" size="3em" />
+                     </graphic>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="paneLister" layoutX="95.0" layoutY="83.0" prefHeight="489.0" prefWidth="793.0">
+               <children>
+                  <TableView id="tAbleLIste" fx:id="tblView" layoutX="14.0" layoutY="9.0" prefHeight="466.0" prefWidth="762.0">
+                    <columns>
+                        <TableColumn id="TableColumnInfo" fx:id="ID_Utilisateur" prefWidth="91.0" text="ID_Utilisateur" visible="false" />
+                        <TableColumn fx:id="SelectionCheckBox" minWidth="0.0" prefWidth="27.0">
+                           <graphic>
+                              <Button fx:id="SuprimerSelection" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="TRASH" />
+                                 </graphic>
+                              </Button>
+                           </graphic>
+                        </TableColumn>
+                      <TableColumn id="TableColumnInfo" fx:id="columnPrenom" minWidth="0.0" prefWidth="78.0" text="Prenom">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeTable" fill="WHITE" glyphName="USER" size="1.5em" />
+                           </graphic>
+                        </TableColumn>
+                      <TableColumn id="TableColumnInfo" fx:id="columnNom" prefWidth="88.0" text="Nom ">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeTable" fill="WHITE" glyphName="USER" size="1.5em" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn id="TableColumnInfo" fx:id="columnGenre" prefWidth="57.0" text="Genre">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeTable" fill="WHITE" glyphName="TRANSGENDER" size="1.5em" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn id="TableColumnInfo" fx:id="columnAge" prefWidth="82.0" text="Naissance">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeTable" fill="WHITE" glyphName="CALENDAR" size="1.5em" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn id="TableColumnInfo" fx:id="columnAdress" prefWidth="81.0" text="Adress">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeTable" glyphName="GLOBE" size="1.5em" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn id="TableColumnInfo" fx:id="columnNationalite" prefWidth="113.0" text="Nationalité">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeTable" fill="WHITE" glyphName="FLAG" size="1.5em" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn id="TableColumnInfo" fx:id="column_ID_Nationalite" prefWidth="94.0" text="ID_Nationalité" visible="false" />
+                        <TableColumn id="TableColumnInfo" fx:id="columnFonction" prefWidth="110.0" text="Fonction">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeTable" fill="WHITE" glyphName="SUITCASE" size="1.5em" />
+                           </graphic>
+                        </TableColumn>
+                        <TableColumn id="TableColumnInfo" fx:id="column_ID_Fonction" prefWidth="110.0" text="ID_Fonction" visible="false" />
+                        <TableColumn id="TableColumnInfo" fx:id="photoProfileUtilisateur" prefWidth="110.0" text="photoUtilisateur" visible="false" />
+                        <TableColumn id="TableColumnInfo" fx:id="columnMatricule" prefWidth="124.0" text="Matricule" />
+                        <TableColumn id="TableColumnInfo" fx:id="dateInscriptionUtilisateur" prefWidth="110.0" text="dateInscriptionutilisateur" visible="false" />
+                        <TableColumn id="TableColumnInfo" fx:id="ageUtilisateur" prefWidth="110.0" text="ageUtilistateur" visible="false" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="paneBox" layoutX="95.0" layoutY="83.0" prefHeight="488.0" prefWidth="793.0">
+               <children>
+                  <BorderPane id="borderpane" fx:id="borderpan" layoutX="9.0" layoutY="13.0" prefHeight="464.0" prefWidth="777.0">
+                     <right>
+                        <Pane prefHeight="464.0" prefWidth="34.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button id="MenuButton" fx:id="buttonmisajourEnBoxRetourMisajour" layoutX="2.5" layoutY="14.0" mnemonicParsing="false" visible="false">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#eb6666" glyphName="TH" />
+                                 </graphic>
+                              </Button>
+                              <Button id="MenuButton" fx:id="buttonmisajourEnBox" layoutX="2.5" layoutY="14.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#fffefe" glyphName="TH" />
+                                 </graphic>
+                              </Button>
+                              <Button id="MenuButton" fx:id="ButtonMisajourEnListe" layoutX="2.5" layoutY="46.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#fffefe" glyphName="LIST" />
+                                 </graphic>
+                              </Button>
+                              <Button id="MenuButton" fx:id="ButtonMisajourEnListeretourMisajour" layoutX="2.5" layoutY="46.0" mnemonicParsing="false" textFill="#bc3f3f" visible="false">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#eb5a5a" glyphName="LIST" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </right>
+                     <center>
+                        <ScrollPane id="ScrollPaneCompteUtilisateur" fx:id="ScrollePane" prefHeight="484.0" prefWidth="718.0" BorderPane.alignment="CENTER">
+                           <content>
+                              <AnchorPane id="anchorpaneCompte" fx:id="anchorpaneBox" prefHeight="462.0" prefWidth="741.0">
+                                 <children>
+                                    <GridPane fx:id="gride">
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </Pane>
+            <Pane fx:id="paneParametre" layoutX="95.0" layoutY="83.0" prefHeight="489.0" prefWidth="793.0" style="-fx-background-color: #808080;">
+               <children>
+                  <TabPane id="tabPanel" layoutX="12.0" layoutY="7.0" prefHeight="477.0" prefWidth="768.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab id="fenetreIconner" text="Utilisateur developeur">
+                        <content>
+                          <AnchorPane id="anchePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane id="PaneRaport" layoutX="15.0" layoutY="7.0" prefHeight="178.0" prefWidth="158.0">
+                                       <children>
+                                          <Label fx:id="IndicationFichier" alignment="CENTER" layoutX="9.0" layoutY="8.0" prefHeight="71.0" prefWidth="140.0" text="Fichier JasperSoft&#10;Report IL doit être :&#10;'*.jaspert'" textAlignment="CENTER" textFill="#b9f5b1">
+                                             <font>
+                                                <Font name="Courier New Bold" size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="buttonJaspertParcourir" fx:id="buttonAjouterJasportRaport" layoutX="13.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" text="Ajouter">
+                                             <graphic>
+                                                <FontAwesomeIcon id="iconsParcourirFichierJaspert" fill="#507db9" glyphName="DOWNLOAD" />
+                                             </graphic>
+                                          </Button>
+                                          <Label fx:id="NoMDufichier" alignment="CENTER" layoutX="3.0" layoutY="79.0" prefHeight="24.0" prefWidth="125.0" text="..." textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="RapelleAction" alignment="CENTER" layoutX="9.0" layoutY="102.0" prefHeight="43.0" prefWidth="140.0" text="Sachez que vous avez rien&#10;choisi" textAlignment="CENTER" textFill="#d7d7d7" />
+                                          <Button id="boutonFichierJasperSoft" fx:id="ButtonparourirFichier" layoutX="128.0" layoutY="75.0" mnemonicParsing="false">
+                                             <graphic>
+                                                <FontAwesomeIcon id="IconFielJasport" fill="WHITE" glyphName="FILE" />
+                                             </graphic>
+                                          </Button>
+                                          <ImageView fx:id="alertManqueFichier" fitHeight="65.0" fitWidth="75.0" layoutX="43.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icons/Angry_Emoji.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="alertBonneFichier" fitHeight="65.0" fitWidth="75.0" layoutX="44.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icons/unnamed.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="alertBonneFichierExtensier" fitHeight="72.0" fitWidth="84.0" layoutX="35.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icons/Image%20par_par_Pete_Linforth_de_Pixabay.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button id="ButtonReduireFichierJaspert" fx:id="boutonReduitreFichierJasport" layoutX="127.0" layoutY="145.0" mnemonicParsing="false" text="-">
+                                             <font>
+                                                <Font name="Arial Bold Italic" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <ComboBox id="ListeRaport" fx:id="comboFichierJasper" layoutX="11.0" layoutY="143.0" prefHeight="25.0" prefWidth="114.0" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/devellopeur.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                      </Tab>
+                        <Tab id="fenetreIconner" text="Consultation">
+                           <content>
+                              <AnchorPane id="anchePane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label id="labelParametreConsultation" alignment="CENTER" layoutX="161.0" layoutY="11.0" prefHeight="42.0" prefWidth="446.0" text="Paramtre des consultations du système" textFill="#ddd7d7">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane id="PaneRaportParametre" layoutX="33.0" layoutY="63.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="78.0" prefHeight="19.0" prefWidth="84.0" text="Système" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonHistorique" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/system_preferences.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="153.0" layoutY="63.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="7.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Confidentialité" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/lock.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="273.0" layoutY="63.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Personnalistation" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite1" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/Personalization-icon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="393.0" layoutY="63.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="73.0" prefHeight="24.0" prefWidth="84.0" text="Gestionnair" textAlignment="CENTER" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite11" layoutX="5.0" layoutY="7.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="91.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/system-file-manager_36030.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="513.0" layoutY="63.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Historique" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite111" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/time_machine.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="633.0" layoutY="63.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Reséau et internet" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite1111" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView accessibleRole="BUTTON" fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/icon-home-reseau.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="33.0" layoutY="185.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="78.0" prefHeight="19.0" prefWidth="84.0" text="Peripherique" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonHistorique1" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/preferences_desktop_peripherals.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="153.0" layoutY="185.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Telephone" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite2" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/htc_trinity.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="273.0" layoutY="185.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Application" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite12" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/TypeMetal-app-icon-256.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="393.0" layoutY="185.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Langue" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite112" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/Language_Icon_1.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="513.0" layoutY="185.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Organisation" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite1112" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/developer_folder_graphite.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="633.0" layoutY="185.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="connection du server" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite11111" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/network_server_database.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="33.0" layoutY="301.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="78.0" prefHeight="19.0" prefWidth="84.0" text="Repartition" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonHistorique11" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/folder.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="153.0" layoutY="301.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Compte utilisateur" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite21" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/develop.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="PaneRaportParametre" layoutX="273.0" layoutY="302.0" prefHeight="100.0" prefWidth="99.0">
+                                       <children>
+                                          <Label id="labeleButtonCultation" alignment="CENTER" layoutX="9.0" layoutY="77.0" prefHeight="17.0" prefWidth="84.0" text="Cominication database" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="butonConsultation" fx:id="ButtonConfidentialite121" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="95.0">
+                                             <graphic>
+                                                <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/dbbackup_icon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                    <Label alignment="CENTER" layoutX="505.0" layoutY="414.0" prefHeight="24.0" prefWidth="258.0" text="..." />
+                                    <Label alignment="CENTER" layoutX="3.0" layoutY="414.0" prefHeight="24.0" prefWidth="258.0" text="..." />
+                                    <JFXHamburger layoutX="730.0" layoutY="12.0" prefHeight="24.0" prefWidth="27.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/configure.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+            <Pane fx:id="PaneAcceuille" layoutX="95.0" layoutY="83.0" prefHeight="487.0" prefWidth="793.0">
+               <children>
+                  <BorderPane layoutX="15.0" layoutY="11.0" prefHeight="464.0" prefWidth="762.0">
+                     <top>
+                        <AnchorPane id="anchePaneaccueille" prefHeight="140.0" prefWidth="762.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pagination fx:id="paginationListdataBase" layoutX="4.0" layoutY="4.0" maxPageIndicatorCount="1" prefHeight="189.0" prefWidth="755.0" />
+                              <Pane id="Paneaccueille" fx:id="PaneBoxe" layoutX="2.0" layoutY="2.0" prefHeight="151.0" prefWidth="760.0">
+                                 <children>
+                                    <HBox layoutX="32.0" layoutY="9.0" prefHeight="140.0" prefWidth="693.0">
+                                       <children>
+                                          <Button id="bouttonListaDataBase" fx:id="databaseA" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <graphic>
+                                                <FontAwesomeIcon id="IconsDatabaseListesControllers" glyphName="DATABASE" size="7em">
+                                                   <fill>
+                                                      <LinearGradient endX="0.7" endY="0.5809523809523809" startY="0.11904761904761904">
+                                                         <stops>
+                                                            <Stop color="#72c4a3" />
+                                                            <Stop color="#72c4a3" offset="0.36015325670498083" />
+                                                            <Stop color="WHITE" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </FontAwesomeIcon>
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaDataBase" fx:id="databaseB" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <graphic>
+                                                <FontAwesomeIcon id="IconsDatabaseListesControllers" glyphName="DATABASE" size="7em">
+                                                   <fill>
+                                                      <LinearGradient endX="0.7" endY="0.5809523809523809" startY="0.11904761904761904">
+                                                         <stops>
+                                                            <Stop color="#72c4a3" />
+                                                            <Stop color="#72c4a3" offset="0.36015325670498083" />
+                                                            <Stop color="WHITE" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </FontAwesomeIcon>
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaDataBase" fx:id="databaseC" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <graphic>
+                                                <FontAwesomeIcon id="IconsDatabaseListesControllers" glyphName="DATABASE" size="7em">
+                                                   <fill>
+                                                      <LinearGradient endX="0.7" endY="0.5809523809523809" startY="0.11904761904761904">
+                                                         <stops>
+                                                            <Stop color="#72c4a3" />
+                                                            <Stop color="#72c4a3" offset="0.36015325670498083" />
+                                                            <Stop color="WHITE" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </FontAwesomeIcon>
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaDataBase" fx:id="databaseD" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <graphic>
+                                                <FontAwesomeIcon id="IconsDatabaseListesControllers" glyphName="DATABASE" size="7em">
+                                                   <fill>
+                                                      <LinearGradient endX="0.7" endY="0.5809523809523809" startY="0.11904761904761904">
+                                                         <stops>
+                                                            <Stop color="#72c4a3" />
+                                                            <Stop color="#72c4a3" offset="0.36015325670498083" />
+                                                            <Stop color="WHITE" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </FontAwesomeIcon>
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaDataBase" fx:id="databaseE" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <graphic>
+                                                <FontAwesomeIcon id="IconsDatabaseListesControllers" glyphName="DATABASE" size="7em">
+                                                   <fill>
+                                                      <LinearGradient endX="0.7" endY="0.5809523809523809" startY="0.11904761904761904">
+                                                         <stops>
+                                                            <Stop color="#72c4a3" />
+                                                            <Stop color="#72c4a3" offset="0.36015325670498083" />
+                                                            <Stop color="WHITE" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </FontAwesomeIcon>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <center>
+                        <AnchorPane id="anchePaneaccueille" prefHeight="152.0" prefWidth="764.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pagination fx:id="paginationListParametre" blendMode="COLOR_BURN" maxPageIndicatorCount="1" prefHeight="138.0" prefWidth="762.0" />
+                              <Pane id="Paneaccueille" fx:id="PaneBoxeParametre" layoutX="2.0" prefHeight="97.0" prefWidth="760.0">
+                                 <children>
+                                    <HBox layoutX="2.0" layoutY="4.0" prefHeight="92.0" prefWidth="755.0">
+                                       <children>
+                                          <Button id="bouttonListaParametre" fx:id="databasePA" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fx:id="CircleparametreA" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaParametre" fx:id="databasePB" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fx:id="CircleparametreB" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaParametre" fx:id="databasePC" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fx:id="CircleparametreC" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaParametre" fx:id="databasePD" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fx:id="CircleparametreD" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaParametre" fx:id="databasePE" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fx:id="CircleparametreE" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListaParametre" fx:id="databasePF" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="130.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fx:id="CircleparametreF" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                     <bottom>
+                        <AnchorPane id="anchePaneaccueille" prefHeight="126.0" prefWidth="764.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Circle fx:id="CerclePhotoProfile" fill="DODGERBLUE" layoutX="65.0" layoutY="64.0" radius="63.0" stroke="#4e4e4e" strokeType="INSIDE" />
+                              <Circle fx:id="CirclePhtotoDefinissantFonctionnaire" fill="DODGERBLUE" layoutX="124.0" layoutY="47.0" radius="35.0" stroke="#4e4e4e" strokeType="INSIDE" />
+                              <Label id="Labelutulisateur" fx:id="NomUtilisateurP" layoutX="204.0" layoutY="41.0" prefHeight="17.0" prefWidth="114.0" text="Utilisateur" />
+                              <Label id="Labelutulisateur" fx:id="PrenomUtilisateurP" layoutX="219.0" layoutY="61.0" prefHeight="17.0" prefWidth="99.0" text="Utilisateur" />
+                              <Label id="Labelutulisateur" fx:id="AgeUtilisateurP" layoutX="200.0" layoutY="81.0" prefHeight="17.0" prefWidth="99.0" text="Utilisateur" />
+                              <Label fx:id="infoUtilisateurPA" layoutX="170.0" layoutY="41.0" prefHeight="17.0" prefWidth="37.0" text="Nom :" textFill="WHITE" />
+                              <Label fx:id="infoUtilisateurPB" layoutX="170.0" layoutY="61.0" prefHeight="17.0" prefWidth="51.0" text="Prenom : " textFill="WHITE" />
+                              <Label fx:id="infoUtilisateurPC" layoutX="170.0" layoutY="81.0" prefHeight="17.0" prefWidth="60.0" text="Age  :" textFill="WHITE" />
+                              <Label fx:id="FonctionFonctionnaire" alignment="CENTER" contentDisplay="CENTER" layoutX="157.0" layoutY="11.0" prefHeight="27.0" prefWidth="158.0" text="Label" textFill="WHITE" />
+                              <Separator layoutX="319.0" layoutY="4.0" opacity="0.2" orientation="VERTICAL" prefHeight="118.0" prefWidth="6.0" />
+                              <Button id="bouttonModificationCompteProfile" layoutX="261.0" layoutY="102.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIcon id="iconsModifierCompteProfille" glyphName="PENCIL">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0" startX="0.15714285714285714">
+                                             <stops>
+                                                <Stop color="#ff1500" />
+                                                <Stop color="WHITE" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                 </graphic>
+                              </Button>
+                              <Button id="bouttonModificationCompteProfile" layoutX="70.0" layoutY="90.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIcon id="iconsModifierCompteProfille" glyphName="CAMERA">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0" startX="0.15714285714285714">
+                                             <stops>
+                                                <Stop color="#ff1500" />
+                                                <Stop color="WHITE" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                 </graphic>
+                              </Button>
+                              <Button id="bouttonModificationCompteProfile" layoutX="121.0" layoutY="46.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIcon id="iconsModifierCompteProfille" glyphName="CAMERA">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0" startX="0.15714285714285714">
+                                             <stops>
+                                                <Stop color="#ff1500" />
+                                                <Stop color="WHITE" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                 </graphic>
+                              </Button>
+                              <Pagination fx:id="paginationListAide" layoutX="321.0" layoutY="2.0" maxPageIndicatorCount="1" prefHeight="125.0" prefWidth="443.0" />
+                              <Pane id="Paneaccueille" fx:id="PaneBoxeParametre1" layoutX="322.0" layoutY="6.0" prefHeight="81.0" prefWidth="441.0">
+                                 <children>
+                                    <HBox layoutX="2.0" layoutY="3.0" prefHeight="78.0" prefWidth="439.0">
+                                       <children>
+                                          <Button id="bouttonListeAide" fx:id="databasePaidA" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListeAide" fx:id="databasePaidB" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListeAide" fx:id="databasePaidC" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListeAide" fx:id="databasePaidD" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListeAide" fx:id="databasePaidE" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane id="BarrePaneVerticale" prefHeight="154.0" prefWidth="15.0" />
+                                          <Button id="bouttonListeAide" fx:id="databasePaidF" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="70.0" text="Button">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                             <graphic>
+                                                <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </bottom>
+                  </BorderPane>
+                  <JFXHamburger id="bouttonListeMenuReglege" layoutX="751.0" layoutY="11.0" />
+               </children>
+            </Pane>
+            <Pane id="paneInfo" layoutX="12.0" layoutY="580.0" prefHeight="65.0" prefWidth="876.0">
+               <children>
+                  <Pane fx:id="MinInfoUtilsateur" layoutX="3.0" layoutY="3.0" prefHeight="59.0" prefWidth="270.0">
+                     <children>
+                        <Label id="Labelutulisateur" fx:id="NomUtilisateur" layoutX="124.0" layoutY="1.0" prefHeight="17.0" prefWidth="114.0" text="Utilisateur" />
+                        <Label id="Labelutulisateur" fx:id="PrenomUtilisateur" layoutX="131.0" layoutY="14.0" prefHeight="17.0" prefWidth="99.0" text="Utilisateur" />
+                        <Label id="Labelutulisateur" fx:id="FonctionUtilisateur" layoutX="131.0" layoutY="28.0" prefHeight="17.0" prefWidth="99.0" text="Utilisateur" />
+                        <Label id="Labelutulisateur" fx:id="AgeUtilisateur" layoutX="131.0" layoutY="42.0" prefHeight="17.0" prefWidth="99.0" text="Utilisateur" />
+                        <Label fx:id="infoUtilisateurA" layoutX="65.0" layoutY="1.0" prefHeight="17.0" prefWidth="37.0" text="Nom :" textFill="WHITE" />
+                        <Label fx:id="infoUtilisateurB" layoutX="65.0" layoutY="13.0" prefHeight="17.0" prefWidth="51.0" text="Prenom : " textFill="WHITE" />
+                        <Label layoutX="65.0" layoutY="26.0" prefHeight="17.0" prefWidth="60.0" text="Fonction : " textFill="WHITE" />
+                        <Label fx:id="infoUtilisateurC" layoutX="65.0" layoutY="40.0" prefHeight="17.0" prefWidth="60.0" text="Age  :" textFill="WHITE" />
+                        <Circle id="photopane" fx:id="PanePhoto" fill="#4b5157" layoutX="29.0" layoutY="29.0" radius="28.0" stroke="#b59d9d" strokeType="INSIDE" />
+                        <Circle id="photopane" fx:id="compteprofilePhoto" fill="#4b5157" layoutX="30.0" layoutY="29.0" radius="28.0" stroke="RED" strokeType="INSIDE" />
+                     </children>
+                  </Pane>
+                  <JFXButton id="exporterVers" fx:id="ExporterTable" layoutX="546.0" layoutY="22.0" prefHeight="25.0" prefWidth="84.0" text="Exporter &gt;">
+                     <graphic>
+                        <FontAwesomeIcon id="exporterIcone" glyphName="SHARE" />
+                     </graphic>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="Selectionmodifier" fx:id="ModifierPersonne" layoutX="648.0" layoutY="22.0" prefHeight="25.0" prefWidth="84.0" text="Modifier">
+                     <graphic>
+                        <FontAwesomeIcon id="idetieEcone" glyphName="PENCIL" />
+                     </graphic>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="SelectionSuprimer" fx:id="SuprimerPersonne" layoutX="747.0" layoutY="20.0" prefHeight="25.0" prefWidth="84.0" text="Suprimer">
+                     <graphic>
+                        <FontAwesomeIcon id="removeIcone" glyphName="TRASH" />
+                     </graphic>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField id="PaneSercher" fx:id="rechercheBarre" layoutX="282.0" layoutY="14.0" prefHeight="35.0" prefWidth="241.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </JFXTextField>
+                  <Button id="SearcheBtn" fx:id="buttonRecherche" layoutX="493.0" layoutY="19.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon fill="#438bff" glyphName="SEARCH" />
+                     </graphic>
+                  </Button>
+                  <Button id="btnCloseFenetre" layoutX="839.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#CloseDialogue" prefHeight="27.0" prefWidth="30.0">
+                     <graphic>
+                        <FontAwesomeIcon id="iconeCloseFenetre" glyphName="CIRCLE" size="1.5em" />
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="ancorpaneLogine" fx:id="anchorPaneLogine" layoutX="3.0" layoutY="2.0" prefHeight="652.0" prefWidth="894.0">
+         <children>
+            <Button id="ButtonLogin" fx:id="buttoneyeSleshConnection" layoutX="839.0" layoutY="368.0" mnemonicParsing="false" style="-fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/eye_slashpng.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="ButtonLogin" fx:id="buttoneyeConnection" layoutX="840.0" layoutY="368.0" mnemonicParsing="false" style="-fx-background-color: #cccccc;">
+               <graphic>
+                  <FontAwesomeIcon fill="#0040ff" glyphName="EYE" size="1.5em" />
+               </graphic>
+            </Button>
+            <JFXTextField id="champsSaisieLogin" fx:id="texteSaisieLogin" layoutX="500.0" layoutY="284.0" prefHeight="50.0" prefWidth="331.0" />
+            <JFXTextField id="champsSaisieLogin" fx:id="texteSaisiePassword" layoutX="500.0" layoutY="360.0" prefHeight="50.0" prefWidth="331.0" />
+            <JFXPasswordField id="champsSaisieLogin" fx:id="texteSaisieLoginPassword" layoutX="500.0" layoutY="360.0" prefHeight="50.0" prefWidth="331.0" />
+            <Button id="ButtonLogin" fx:id="ConnectionLogine" contentDisplay="RIGHT" layoutX="709.0" layoutY="451.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" text="Connection">
+               <graphic>
+                  <Circle fx:id="CircleConnection" fill="GREY" radius="12.0" stroke="GREY" strokeType="INSIDE" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="nombreDeConnexionLogin" alignment="CENTER" layoutX="482.0" layoutY="23.0" text="Nombre de Connection" textFill="WHITE" />
+            <Label fx:id="PersonneLogin" alignment="CENTER" layoutX="522.0" layoutY="58.0" prefHeight="32.0" prefWidth="289.0" text="Personne Connecter Ressament est : Utilisateur" textFill="WHITE" />
+            <Label fx:id="LabeleCreerCompte" alignment="CENTER" layoutX="490.0" layoutY="613.0" text="Creer un Compte" textFill="#cdc2c2" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Label>
+            <Label fx:id="LabeleModeDePasseOublier" alignment="CENTER" layoutX="580.0" layoutY="551.0" prefHeight="17.0" prefWidth="150.0" text="Mot de Passe Oublier" textFill="#9a6b6b" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Label>
+            <Label fx:id="labeleConnectionVousLogin" alignment="CENTER" layoutX="622.0" layoutY="240.0" prefHeight="26.0" prefWidth="91.0" text="Connectez vous !" textFill="WHITE" />
+            <Label fx:id="labeleLoginVerification" alignment="CENTER" layoutX="530.0" layoutY="420.0" prefHeight="17.0" prefWidth="289.0" text="j'ai pu triouvé votre compte !!!!!" textFill="#12ff01">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labeleLoginMotDePasseOublier" alignment="CENTER" layoutX="530.0" layoutY="420.0" prefHeight="17.0" prefWidth="289.0" text="Nom ou Mot de passe est incorecte " textFill="#ff6003">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labeltexteRappelleTache" alignment="CENTER" layoutX="149.0" layoutY="87.0" prefHeight="24.0" prefWidth="173.0" text="Creation d'un nouvel Compte" textFill="#2eff00" />
+            <MenuButton id="MenuButtinStyleControllersUtilisateur" fx:id="MenuButtonConnectionRecante" layoutX="735.0" layoutY="143.0" mnemonicParsing="false" text="Conn... reçante" textFill="WHITE">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Nom utilisateur Connecter reçante">
+                     <graphic>
+                        <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     </graphic>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              </items>
+               <graphic>
+                  <Circle fill="DODGERBLUE" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+               </graphic>
+            </MenuButton>
+            <Circle fx:id="ConnectionRessantCircle" fill="GREY" layoutX="665.0" layoutY="167.0" radius="67.0" stroke="GREY" strokeType="INSIDE" />
+            <JFXCheckBox id="CheckBoxButtonLogin" fx:id="checkBoxSauvegarderScession" alignment="CENTER" checkedColor="#000dff" layoutX="515.0" layoutY="453.0" prefHeight="28.0" prefWidth="190.0" text="Sauvegarder la scession" textFill="WHITE" unCheckedColor="#724646" />
+            <JFXTextField id="champsSaisieLogin" fx:id="texteFildeNomUtilsateur" layoutX="21.0" layoutY="118.0" prefHeight="40.0" prefWidth="190.0" />
+            <JFXTextField id="champsSaisieLogin" fx:id="textFildePrenomUtilsateur" layoutX="216.0" layoutY="116.0" prefHeight="40.0" prefWidth="190.0" />
+            <JFXTextField id="champsSaisieLogin" fx:id="texteFildeAdressEmailUtilsateur" layoutX="49.0" layoutY="169.0" prefHeight="40.0" prefWidth="331.0" />
+            <JFXTextField id="champsSaisieLogin" fx:id="textFildePassWorde" layoutX="49.0" layoutY="222.0" prefHeight="40.0" prefWidth="331.0" />
+            <JFXPasswordField id="champsSaisieLogin" fx:id="PassWordeIdentification" layoutX="49.0" layoutY="222.0" prefHeight="40.0" prefWidth="331.0" />
+            <JFXTextField id="champsSaisieLogin" fx:id="textFildeCodeIdentificationUtilisateur" layoutX="49.0" layoutY="275.0" prefHeight="40.0" prefWidth="331.0" />
+            <JFXPasswordField id="champsSaisieLogin" fx:id="CodeIdentifiactionMatriculeUtilisateur" layoutX="49.0" layoutY="275.0" prefHeight="40.0" prefWidth="331.0" />
+            <JFXComboBox id="comboBoxStyle" fx:id="ComboxListeFonction" focusColor="#1200ff" layoutX="51.0" layoutY="332.0" prefHeight="30.0" prefWidth="289.0" unFocusColor="#00ff4b" />
+            <JFXDatePicker id="champsSaisieDateLogin" fx:id="dateNaissanceUtilsateur" cache="true" editable="false" layoutX="135.0" layoutY="376.0" prefHeight="35.0" prefWidth="200.0" showWeekNumbers="true" />
+            <JFXTextField id="champsSaisieLogin" fx:id="textFildeLocalisationUtilisateur" layoutX="59.0" layoutY="468.0" prefHeight="40.0" prefWidth="331.0" />
+            <JFXCheckBox fx:id="checkBoxAccepterLesCondition" layoutX="66.0" layoutY="541.0" text="Finaliser l'inscription" textFill="#8d8d8d" />
+            <Button id="ButtonLogin" fx:id="buttonEnrigistrerUtilisateur" contentDisplay="RIGHT" disable="true" layoutX="295.0" layoutY="538.0" mnemonicParsing="false" text="Enrigistrer">
+               <graphic>
+                  <FontAwesomeIcon fx:id="fontDownloadeLogin" fill="#15ff00" glyphName="DOWNLOAD" />
+               </graphic>
+            </Button>
+            <Label fx:id="LabelleHomme" layoutX="149.0" layoutY="434.0" text="Homme" textFill="#00b4ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labeleEnrigistrementEnAttente" layoutX="151.0" layoutY="612.0" text="Enregistrement en Attente" textFill="#37c0c3" />
+            <Button id="ButtonLogin" fx:id="ButtonMasquerPassWorde" layoutX="8.0" layoutY="255.0" mnemonicParsing="false" style="-fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/eye_slashpng.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="ButtonLogin" fx:id="ButtonAfficherPassWorde" layoutX="8.0" layoutY="255.0" mnemonicParsing="false" style="-fx-background-color: #CCCCCC;">
+               <graphic>
+                  <FontAwesomeIcon fill="#0040ff" glyphName="EYE" size="1.5em" />
+               </graphic>
+            </Button>
+            <JFXToggleButton fx:id="TogglGenreUtilisateur" layoutX="178.0" layoutY="413.0" prefHeight="50.0" prefWidth="143.0" text="Femme" toggleColor="#00ff9d" toggleLineColor="#ff00d2" unToggleColor="#00a4ff" unToggleLineColor="#4d00ff" />
+            <Circle fx:id="CircleGenreutilateur" fill="GREY" layoutX="121.0" layoutY="442.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CircleFonctionUtilisateur" fill="GREY" layoutX="363.0" layoutY="349.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="circlePrenomUtilasteur" fill="GREY" layoutX="390.0" layoutY="136.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CircleAdresseUtilsateur" fill="GREY" layoutX="364.0" layoutY="189.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CirclePassWorde" fill="GREY" layoutX="364.0" layoutY="242.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CirclePassWordeUtilsateur" fill="GREY" layoutX="364.0" layoutY="295.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CircleLocalisateurUtilisateur" fill="GREY" layoutX="374.0" layoutY="488.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CircleNomUtilisateur" fill="GREY" layoutX="195.0" layoutY="138.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CircleUser" fill="GREY" layoutX="810.0" layoutY="309.0" radius="20.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CircleSaisiePassword" fill="GREY" layoutX="810.0" layoutY="385.0" radius="20.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CircleEmogieIndicatif" fill="GREY" layoutX="803.0" layoutY="430.0" radius="15.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CirclechargementUtilisateur" fill="GREY" layoutX="221.0" layoutY="588.0" radius="18.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="CircleChargement" fill="GREY" layoutX="669.0" layoutY="515.0" radius="18.0" stroke="GREY" strokeType="INSIDE" />
+            <Circle fx:id="circleAvatarCreationCompte" fill="GREY" layoutX="237.0" layoutY="48.0" radius="40.0" stroke="GREY" strokeType="INSIDE" />
+            <Pane layoutX="6.0" layoutY="3.0" prefHeight="645.0" prefWidth="461.0" visible="false" />
+            <Pane id="PaneSliderLogin" fx:id="paneLogin" layoutX="3.0" layoutY="2.0" prefHeight="648.0" prefWidth="461.0">
+               <children>
+                  <Label fx:id="revenireLogin" alignment="CENTER" layoutX="137.0" layoutY="1.0" prefHeight="35.0" prefWidth="199.0" text="Vous pouvez, Connecter&#10;Avec :" textAlignment="CENTER" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Separator fx:id="barreSeparator" layoutX="47.0" layoutY="103.0" opacity="0.39" prefHeight="3.0" prefWidth="369.0" />
+                  <Button id="ButtonLoginInscription" fx:id="inscriptionLogin" layoutX="189.0" layoutY="121.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="84.0" text="S'inscrire">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button id="ButtonLoginInscription" fx:id="SeConnecterLogin" layoutX="187.0" layoutY="144.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="90.0" text="Se Connecter">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="labeleLogineInformation" alignment="CENTER" layoutX="135.0" layoutY="106.0" prefHeight="40.0" prefWidth="199.0" text="     Si vous avez déjà un compte &#10;Alors pour revenir, c'est ce button" textFill="#2fff00">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Separator fx:id="barreSeparator2" layoutX="47.0" layoutY="178.0" opacity="0.39" prefHeight="3.0" prefWidth="369.0" />
+                  <Circle fx:id="CircleAnimation" fill="GREY" layoutX="229.0" layoutY="410.0" radius="220.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="CircleTweeter" fill="GREY" layoutX="339.0" layoutY="71.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="CircleFacebook" fill="GREY" layoutX="231.0" layoutY="71.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="CircleGoogle" fill="GREY" layoutX="135.0" layoutY="69.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+               </children></Pane>
+            <JFXHamburger id="buttonMenuLogin" layoutX="845.0" layoutY="10.0" prefHeight="40.0" prefWidth="40.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXHamburger>
+            <Button id="btnCloseFenetre" layoutX="848.0" layoutY="610.0" mnemonicParsing="false" onMouseClicked="#CloseDialogue" prefHeight="27.0" prefWidth="30.0">
+               <graphic>
+                  <FontAwesomeIcon id="iconeCloseFenetre" glyphName="CIRCLE" size="1.5em" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

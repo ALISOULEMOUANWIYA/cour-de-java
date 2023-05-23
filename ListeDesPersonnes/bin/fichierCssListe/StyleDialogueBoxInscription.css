@@ -1,0 +1,153 @@
+HBox{
+	-fx-background-color :  #696969;
+	    -fx-border-color: #ccf6f3;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+}
+#PaneSaisieInscription{
+		-fx-background-color :  #808080;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+}
+#PaneSaisiePhoto{
+	-fx-background-color :  #696969;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+}
+MenuBar{
+	-fx-background-color : rgb(95,158,160, 0.2);
+	-fx-background-radius :  5em;
+	-fx-border-radius: 5em;
+}
+
+#photoPane{
+	-fx-background-color : black;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 5em;
+}
+
+#paneInscription, #paneTelechargerPhoto{
+	-fx-background-color :  #4e4e4e;
+    -fx-border-color: #ccf6f3;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+}
+
+
+
+#SaisieInfo{
+	-fx-background-color: rgb(255,255, 255, 0.2);
+	-fx-background-radius: 5;
+	-fx-text-fill: white;	
+	-fx-alignment: CENTER ;
+}
+
+#SaisieInfo:hover{
+	-fx-background-color: #66CDAA;
+	-fx-background-radius: 5;
+	-fx-text-fill: white;
+	-fx-alignment: center ;
+}
+
+
+#SaisieInfo:pressed{
+	-fx-background-color: white;
+	-fx-background-radius: 5;
+	-fx-text-fill: black;
+	-fx-alignment: center ;
+}
+
+#descriptionLAbel{
+	-fx-background-radius: 2;
+	-fx-text-fill: white;
+	-fx-alignment: CENTER ;
+	-fx-background-color: #9400D3;
+}
+#PositionListe{
+ -fx-background-color: transparent;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+  -fx-border-radius: 22;
+}
+#PositionListe:hover{
+ -fx-background-color: #708090;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+  -fx-border-radius: 22;
+}
+
+#PositionListe:pressed{
+ -fx-background-color: #14804ec9;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-border-color: #e85600;
+  -fx-border-radius: 22;
+}
+#labeleInfoStyle{
+ -fx-background-color: transparent;
+ -fx-background-radius: 22;
+  -fx-alignment: center;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+  -fx-border-radius: 22;
+}
+#labeleInfo{
+ -fx-background-color: transparent;
+ -fx-background-radius: 22;
+  -fx-alignment: center;
+ -fx-text-fill: red;
+ -fx-border-color: #5F9EA0;
+  -fx-border-radius: 22;
+}
+#AlertChamp{
+	 -fx-background-color: transparent;
+ -fx-background-radius: 22;
+  -fx-alignment: center;
+ -fx-text-fill: red;
+ -fx-border-color: #5F9EA0;
+  -fx-border-radius: 22;
+}
+#labeleInfoStyle:hover,
+#labeleInfo:hover,
+#AlertChamp:hover{
+	 -fx-background-color: #708090;
+	 -fx-background-radius: 22;
+	 -fx-alignment: center; 
+	 -fx-text-fill: black;
+	 -fx-border-color: blue;
+	  -fx-border-radius: 22;
+}
+#labeleInfoStyle:pressed,
+#labeleInfo:pressed,
+#AlertChamp:pressed{
+ -fx-background-color: #14804ec9;
+ 	 -fx-alignment: center;
+	 -fx-background-radius: 22;
+	 -fx-text-fill: red;
+	 -fx-border-color: #e85600;
+  -fx-border-radius: 22;
+}
+
+
+#buttonAction{
+ -fx-background-color: #708090;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-border-color: #5F9EA0;
+ -fx-border-radius: 22;
+}
+#FermetureBox{
+	-fx-fill :red;
+	-fx-border-color: #000080;
+}
+#FermetureBox:hover{
+	-fx-fill :#ADFF2F;
+	-fx-border-color: #000080;
+}
+#FermetureBox:pressed{
+	 -fx-fill :#FF0000;
+	 -fx-border-color: #800080;
+}

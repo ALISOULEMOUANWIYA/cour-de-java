@@ -1,0 +1,10 @@
+ - Le compte N° : 8;
+ - est un compte : Jointe;
+ - Code du compte : comJ8te;
+ - Valeur courante : 34542.0
+
+ - Le compte N° : 9;
+ - est un compte : Courante;
+ - Code du compte : comC9te;
+ - Valeur courante : 342.0
+

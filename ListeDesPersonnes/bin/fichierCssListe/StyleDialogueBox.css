@@ -1,0 +1,145 @@
+
+#vboxNom,
+#IdPaneLien,
+#idPane{
+ -fx-background-radius: 20;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+}
+#IdPanephoto,
+#idPaneDescription{
+	-fx-background-color: #808080;
+	 -fx-background-radius: 20;
+	 -fx-border-color: #ccf6f3;
+	 -fx-border-radius: 20;
+}
+#paneParcouru{
+-fx-background-radius: 20;
+-fx-background-color: #808080;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+}
+#IdPaneLien{
+-fx-background-radius: 18;
+-fx-background-color: #696969;
+}
+#idPanePhoto{
+-fx-background-radius: 18;
+-fx-background-color: #808080;
+}
+#idDescriptionpane{
+-fx-background-radius: 18;
+-fx-background-color: #808080;
+}
+#idPaneModificatio{
+-fx-background-radius: 18;
+-fx-background-color: #808080;
+}
+#idScropane{
+-fx-background-radius: 18;
+-fx-background-color: #808080;
+}
+#idButtonParcourir{
+ -fx-background-color: #32CD32;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-border-color: #000;
+ -fx-border-radius: 20;
+}
+#idButtonParcourir:hover{
+ -fx-background-color: white;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: #000;
+ -fx-border-radius: 20;
+ -fx-rotate: 5;
+}
+#idButtonParcourir:pressed{
+ -fx-background-color: white;
+ -fx-text-fill: white;
+ -fx-cursor: wait;
+ -fx-background-radius: 22;
+ -fx-border-color: #000;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+/*---------------------------------------------------------------------------*/
+#btnClose:hover{
+	 -fx-fill :#ADFF2F;
+	 -fx-border-color: #000080;
+}
+#btnClose:pressed{
+	 -fx-fill :#FF0000;
+	 -fx-border-color: #800080;
+}
+
+#ButtonChoix{
+ -fx-background-color: transparent;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+ -fx-border-radius: 20;
+}
+#ButtonChoix:hover{
+ -fx-background-color: #778899;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: 5;
+}
+#ButtonChoix:pressed{
+ -fx-background-color: #00FF7F;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+/*----------------------------------------------------------------------------*/
+
+
+#EnplacemetntPhoto{
+-fx-background-radius: 5;
+-fx-text-fill: white;
+-fx-alignment: center ;
+-fx-background-color: #228B22;
+}
+#Photolient{
+	-fx-background-color: rgb(255, 255, 255, .2);
+	-fx-background-radius: 5;
+	-fx-text-fill: white;
+	-fx-border-color: #ccf6f3;
+}
+#Photolient:hover{
+ -fx-background-color: #667788;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-alignment: CENTER ;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 10;
+}
+#NomUtlisateur,#PrenomUtilisateur{
+	-fx-background-radius: 2;
+	-fx-text-fill: white;
+	-fx-text-alignment: center ;
+	-fx-background-color: #9400D3;
+}
+#DescriptionTexte{
+	-fx-text-fill: white;
+	-fx-alignment: center ;
+}
+#DescriptionTexte:hover{
+	-fx-text-fill: black;
+	-fx-background-color: white;
+	-fx-alignment: center ;
+}
+#DescriptionTexte:pressed{
+	-fx-text-fill: white;
+	-fx-alignment: center ;
+}
+

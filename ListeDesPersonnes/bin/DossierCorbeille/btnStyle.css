@@ -1,0 +1,9 @@
+#btnClose:hover{
+	 -fx-fill :#ADFF2F;
+	 -fx-border-color: #000080;
+}
+#btnClose:pressed{
+	 -fx-fill :#FF0000;
+	 -fx-border-color: #800080;
+}
+

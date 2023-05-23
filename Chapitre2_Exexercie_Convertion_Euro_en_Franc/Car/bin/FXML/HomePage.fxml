@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pageDaction" prefHeight="745.0" prefWidth="1183.0" style="-fx-background-color: rgb(150,0,0,0.1); -fx-background-radius: 5em;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomeController">
+   <children>
+      <Pane layoutX="2.0" layoutY="1.0" prefHeight="743.0" prefWidth="179.0" style="-fx-background-color: rgb(112,128,144); -fx-background-radius: 2em;">
+         <children>
+            <Pane layoutX="50.0" layoutY="2.0" prefHeight="75.0" prefWidth="72.0" style="-fx-background-color: #FFEFD5; -fx-background-radius: 10em; -fx-border-color: black; -fx-border-radius: 10em;" />
+            <Pane layoutX="105.0" layoutY="55.0" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: #FFEFD5; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 10em;" />
+            <Label alignment="CENTER" layoutX="11.0" layoutY="75.0" prefHeight="25.0" prefWidth="152.0" text="Bonjour" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="88.0" prefHeight="35.0" prefWidth="152.0" text="Ali Soule Mouanwiya" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="605.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Pane layoutX="72.0" layoutY="696.0" prefHeight="35.0" prefWidth="44.0" style="-fx-background-color: #000000; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 10em;">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/back_to.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Separator layoutY="128.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="168.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="208.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutX="-1.0" layoutY="247.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="287.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="327.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="368.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="407.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="448.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="487.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="527.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <Separator layoutY="565.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <JFXButton layoutX="40.0" layoutY="132.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="mon compte ( + )" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="41.0" layoutY="171.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="Photos et videos" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="40.0" layoutY="211.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="Schat" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="38.0" layoutY="250.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="Watch" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="39.0" layoutY="290.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="Mes Travaux" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="40.0" layoutY="330.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="Mes transactions" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="39.0" layoutY="371.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="Les diffenrents taches" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="39.0" layoutY="411.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="39.0" layoutY="451.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="38.0" layoutY="490.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="38.0" layoutY="529.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="39.0" layoutY="569.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="Paramètres" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <Separator layoutX="1.0" layoutY="645.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <JFXButton layoutX="37.0" layoutY="609.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 1em;" text="Historiques" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <Separator layoutX="1.0" layoutY="685.0" opacity="0.17" prefHeight="3.0" prefWidth="179.0" />
+            <JFXButton layoutX="36.0" layoutY="648.0" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Nous contacter" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="147.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="146.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="147.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutX="5.0" layoutY="138.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="5.0" layoutY="176.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="5.0" layoutY="216.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="5.0" layoutY="256.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="5.0" layoutY="296.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="6.0" layoutY="337.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="5.0" layoutY="377.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="6.0" layoutY="417.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="5.0" layoutY="456.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="4.0" layoutY="495.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="4.0" layoutY="534.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="4.0" layoutY="575.0" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="0" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="119.0" layoutY="67.0" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="i" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="41.0" layoutY="16.0" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #B8860B; -fx-background-radius: 5em;" text="i" textAlignment="CENTER" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="144.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="145.0" layoutY="609.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="35.0" fitWidth="23.0" layoutX="144.0" layoutY="648.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="185.0" prefHeight="743.0" prefWidth="951.0" style="-fx-background-color: rgb(150,0,0,0); -fx-background-radius: 2em;">
+         <children>
+            <Pane layoutX="-1.0" prefHeight="743.0" prefWidth="998.0" style="-fx-background-color: red; -fx-background-radius: 2em;" />
+            <Pane layoutX="-1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: blue; -fx-background-radius: 2em;" />
+            <Pane layoutX="-1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: white; -fx-background-radius: 2em;" />
+            <Pane prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #BC8F8F; -fx-background-radius: 2em;" />
+            <Pane layoutX="1.0" layoutY="1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #FFE4C4; -fx-background-radius: 2em;" />
+            <Pane layoutX="1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #0000FF; -fx-background-radius: 2em;" />
+            <Pane layoutX="1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #B0C4DE; -fx-background-radius: 2em;" />
+            <Pane layoutX="1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #008080; -fx-background-radius: 2em;" />
+            <Pane prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #00CED1; -fx-background-radius: 2em;" />
+            <Pane layoutY="-1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #7FFFD4; -fx-background-radius: 2em;" />
+            <Pane layoutX="1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #006400; -fx-background-radius: 2em;" />
+            <Pane layoutX="1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #8FBC8F; -fx-background-radius: 2em;" />
+            <Pane layoutY="-1.0" prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: #00FA9A; -fx-background-radius: 2em;" />
+            <Pane prefHeight="744.0" prefWidth="997.0" style="-fx-background-color: rgb(150,0,0); -fx-background-radius: 2em;">
+               <children>
+                  <ScrollPane layoutY="26.0" prefHeight="718.0" prefWidth="997.0" style="-fx-background-color: #000000;">
+                     <content>
+                        <Pane prefHeight="56.0" prefWidth="978.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 2em;">
+                           <children>
+                              <ButtonBar layoutX="5.0" prefHeight="56.0" prefWidth="864.0">
+                                <buttons>
+                                  <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Ajouter" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Suprimer" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Modifier" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Diaporama" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Lister" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Button" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Button" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Button" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Button" textFill="WHITE" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #191970; -fx-background-radius: 2em;" text="Paramètre" textFill="WHITE" />
+                                </buttons>
+                              </ButtonBar>
+                              <Pane layoutX="922.0" layoutY="1.0" prefHeight="56.0" prefWidth="54.0" style="-fx-background-color: #696969; -fx-background-radius: 2em;">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/menu.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </content></ScrollPane>
+                  <MenuBar layoutX="4.0" prefHeight="27.0" prefWidth="989.0" style="-fx-background-radius: 2em; -fx-border-color: black; -fx-border-radius: 2em;">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

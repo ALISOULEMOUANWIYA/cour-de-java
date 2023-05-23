@@ -1,0 +1,51 @@
+
+#paneParcouru{
+-fx-background-radius: 20;
+-fx-background-color: #808080;
+}
+#IdPaneLien{
+-fx-background-radius: 18;
+-fx-background-color: #696969;
+}
+#idPanePhoto{
+-fx-background-radius: 18;
+-fx-background-color: #808080;
+}
+#idDescriptionpane{
+-fx-background-radius: 18;
+-fx-background-color: #808080;
+}
+#idPaneModificatio{
+-fx-background-radius: 18;
+-fx-background-color: #808080;
+}
+#idScropane{
+-fx-background-radius: 18;
+-fx-background-color: #808080;
+}
+#idButtonParcourir{
+ -fx-background-color: #32CD32;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-border-color: #000r;
+ -fx-border-radius: 20;
+}
+#idButtonParcourir:hover{
+ -fx-background-color: white;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: #000;
+ -fx-border-radius: 20;
+ -fx-rotate: 5;
+}
+#idButtonParcourir:pressed{
+ -fx-background-color: white;
+ -fx-text-fill: white;
+ -fx-cursor: wait;
+ -fx-background-radius: 22;
+ -fx-border-color: #000;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}

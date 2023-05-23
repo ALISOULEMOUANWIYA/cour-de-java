@@ -1,0 +1,8 @@
+
+.myDialog{
+	-fx-background-color: rgba(0, 0, 0, 0.5);
+	-fx-background-radius: 10;
+	-fx-text-alignment: center ;
+	-fx-border-radius: 5;
+}
+

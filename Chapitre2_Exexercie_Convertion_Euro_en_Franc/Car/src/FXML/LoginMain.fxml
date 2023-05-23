@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="686.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginControllers">
+   <children>
+      <JFXTextField fx:id="userName" alignment="CENTER" focusColor="#0059ff" labelFloat="true" layoutX="80.0" layoutY="132.0" prefHeight="36.0" prefWidth="291.0" promptText="Entrez votre Nom OU votre address Email" style="-fx-background-radius: 5em;" unFocusColor="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></JFXTextField>
+      <JFXPasswordField fx:id="passWord" alignment="CENTER" focusColor="#0040ff" labelFloat="true" layoutX="82.0" layoutY="209.0" prefHeight="36.0" prefWidth="291.0" promptText="Entrez votre mot de passe" style="-fx-background-radius: 5em;" unFocusColor="WHITE" />
+      <JFXButton fx:id="connexionUser" buttonType="RAISED" layoutX="256.0" layoutY="282.0" onAction="#loginAction" prefHeight="25.0" prefWidth="90.0" ripplerFill="#1a00ff" style="-fx-background-color: #00FF7F; -fx-background-radius: 5em;" text="Connexion">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></JFXButton>
+      <JFXCheckBox fx:id="conditionUtil" checkedColor="#00ff80" layoutX="57.0" layoutY="285.0" onAction="#checkAction" prefHeight="18.0" prefWidth="182.0" text="Accepter les conditions d'utilisation" textFill="#ffffff99" unCheckedColor="#a10303">
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXButton fx:id="motdepassOUblier" buttonType="RAISED" layoutX="141.0" layoutY="336.0" prefHeight="25.0" prefWidth="170.0" ripplerFill="#f8f8f8" text="Mot de passe oublier ?" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="61.0" fitWidth="74.0" layoutX="199.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="43.0" layoutX="39.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="43.0" layoutX="39.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/icons8_password_43px.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="159.0" layoutY="84.0" prefHeight="17.0" prefWidth="142.0" text="Connectez vous !" textFill="#1aff00">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="chargementConnxion" fitHeight="36.0" fitWidth="82.0" layoutX="208.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../iconsGif/transparentloader.gif" />
+         </image></ImageView>
+      <AnchorPane layoutX="394.0" layoutY="1.0" prefHeight="479.0" prefWidth="291.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="304.0" fitWidth="283.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconsGif/y42.gif" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="creercompte" buttonType="RAISED" layoutX="74.0" layoutY="109.0" onAction="#creercompte" prefHeight="25.0" prefWidth="135.0" ripplerFill="#00ff30" style="-fx-background-color: #4169E1; -fx-background-radius: 5em;" text="S'inscrire" textFill="WHITE">
+               <effect>
+                  <Shadow blurType="ONE_PASS_BOX" color="#ffeded" height="89.21" radius="40.394999999999996" width="74.37" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="laisse" buttonType="RAISED" layoutX="23.0" layoutY="441.0" onAction="#laisseAction" prefHeight="25.0" prefWidth="90.0" ripplerFill="#00a6ff" style="-fx-background-color: #A52A2A; -fx-background-radius: 5em;" text="Laisser" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="rabessement" alignment="CENTER" layoutX="78.0" layoutY="255.0" prefHeight="17.0" prefWidth="247.0" text="Nom ou Mot de passe est incorecte " textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="compliment" alignment="CENTER" layoutX="78.0" layoutY="254.0" prefHeight="17.0" prefWidth="247.0" text="j'ai pu triouvé votre compte !!!!!" textAlignment="CENTER" textFill="#2eff00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="nonCompte" fitHeight="29.0" fitWidth="36.0" layoutX="310.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/Download_Angry.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zenCompte" fitHeight="29.0" fitWidth="36.0" layoutX="310.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/unnamed.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

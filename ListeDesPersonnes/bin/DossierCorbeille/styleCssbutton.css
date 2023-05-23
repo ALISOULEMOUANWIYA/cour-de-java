@@ -1,0 +1,189 @@
+
+#idButtonParcourir,
+#ButtonChoix ,
+#AjouterListe,
+#preView,
+#exporterVers,
+#Selectionmodifier,
+#SelectionSuprimer{
+	
+ -fx-background-color: transparent;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+ -fx-border-radius: 20;
+}
+
+#ButtonChoix:hover,
+#AjouterListe:hover,
+#preView:hover,
+#exporterVers:hover,
+#Selectionmodifier:hover,
+#SelectionSuprimer:hover{
+ -fx-background-color: #778899;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: 5;
+}
+#idButtonParcourir:hover{
+ -fx-background-color: #778899;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+#ButtonChoix:pressed,
+#AjouterListe:pressed,
+#AjouterListe:pressed,
+#preView:pressed{
+ -fx-background-color: #2E8B57;
+ -fx-background-radius: 22;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+
+#SelectionSuprimer:pressed{
+ -fx-background-color: red;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+#Selectionmodifier:pressed{
+ -fx-background-color: #800080;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+#exporterVers:pressed{
+ -fx-background-color: #00FF7F;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+#exporterVers:pressed > #exporterIcone,
+#Selectionmodifier:pressed > #idetieEcone,
+#SelectionSuprimer:pressed > #removeIcone,
+#AjouterListe:pressed > #ajouterIcone{
+	-fx-fill: white;
+}
+
+#AjouterListe:pressed > #ajouterIcone{
+	-fx-fill: black;
+}
+#idButtonParcourir:pressed{
+ -fx-background-color: #2E8B57;
+ -fx-background-radius: 22;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+#SauvegardeModifucation{
+ -fx-background-color: #E6E6FA;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: blue;
+ -fx-border-radius: 20;
+}
+#SauvegardeModifucation:hover{
+ -fx-background-color: #FF00FF;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: white;
+ -fx-border-radius: 20;
+ -fx-rotate: 2;
+}
+#SauvegardeModifucation:pressed{
+ -fx-background-color: red;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -2;
+}
+
+
+#SuprimerSelection{
+ -fx-background-color: #E6E6FA;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: blue;
+ -fx-border-radius: 20;
+}
+#SuprimerSelection:hover{
+ -fx-background-color: #00FF00;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: white;
+ -fx-border-radius: 20;
+ -fx-rotate: 2;
+}
+#SuprimerSelection:pressed{
+ -fx-background-color: #6495ED;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -2;
+}
+
+#MenuButton, #btnCloseFenetre{
+	-fx-background-color: transparent;
+ 	
+}
+#MenuButton:hover{
+	-fx-background-color: rgb(250, 250, 250, 0.2);
+ 	-fx-border-color: #ccf6f3;
+}
+#MenuButton:pressed{
+	-fx-background-color: #B0E0E6;
+	 -fx-background-radius: 22;
+	 -fx-font-weight: bold;
+	 -fx-border-radius: 20;
+ 	-fx-border-color: #ccf6f3;
+}
+#btnCloseFenetre:pressed{
+	-fx-background-color: #B0E0E6;
+	 -fx-background-radius: 22;
+	 -fx-font-weight: bold;
+	 -fx-border-radius: 20;
+ 	-fx-border-color: black;
+}
+
+#MenuButton:pressed > #identMenu{
+ 	-fx-fill: #2F4F4F;
+}
+
+#iconeCloseFenetre{
+	-fx-fill: #A52A2A;
+}
+#iconeCloseFenetre:hover{
+	-fx-fill: #228B22;
+}
+
+#btnCloseFenetre:pressed > #iconeCloseFenetre{
+ 	-fx-fill: red;
+}
+
+#SearcheBtn{
+	-fx-background-color:  transparent;
+}

@@ -1,0 +1,85 @@
+AnchorPane{
+	-fx-background-color: #696969;
+	-fx-background-radius: 2em;
+	-fx-text-fill: white;
+	 -fx-font-weight: bold;
+	 -fx-border-color: #ccf6f3;
+	 -fx-border-radius: 2em;
+
+}
+#labelFonction{
+	-fx-background-color: rgb(255, 255, 255, .2);
+	-fx-background-radius: 2em;
+	-fx-text-fill: white;
+	-fx-border-color: #ccf6f3;
+	-fx-border-radius: 2em;
+}
+
+#texteNouvelleFonction{
+	-fx-background-color: rgb(255, 255, 255, .2);
+	-fx-text-fill: white;
+	-fx-background-radius: 5;
+	-fx-border-color: #ccf6f3;
+}
+#texteNouvelleFonction:hover{
+ -fx-background-color: #667788;
+ -fx-background-radius: 22;
+ -fx-text-fill: #000000;
+ -fx-alignment: CENTER ;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 10;
+}
+#tableFonction{
+ -fx-background-color: #808080;
+ -fx-background-radius: 0.5em;
+ -fx-text-fill: white;
+ -fx-alignment: CENTER ;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 0.5em;
+}
+#btnSave{
+ -fx-background-color: transparent;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+  -fx-border-radius: 22;
+}
+#btnSave:hover{
+ -fx-background-color: #708090;
+ -fx-background-radius: 2em;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+  -fx-border-radius: 2em;
+   -fx-rotate: 5;
+}
+#btnSave:pressed{
+  -fx-background-color: #14804ec9;
+  -fx-background-radius: 2em;
+  -fx-text-fill: white;
+  -fx-border-color: #e85600;
+  -fx-border-radius: 2em;
+   -fx-rotate: -5;
+}
+
+#btnSave:pressed > #savedIcons{
+	-fx-fill :  #9a9725;
+}
+
+#btnClose{
+ 	-fx-background-color: transparent;	
+}
+
+#CloseIcone{
+	-fx-fill :red;
+	-fx-border-color: #000080;
+}
+#CloseIcone:hover{
+	-fx-fill :#ADFF2F;
+	-fx-border-color: #000080;
+}
+#CloseIcone:pressed{
+	 -fx-fill :#FF0000;
+	 -fx-border-color: #800080;
+}

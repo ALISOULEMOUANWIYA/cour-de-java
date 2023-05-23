@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<HBox id="inscriptionBoxe" fx:id="vbBoxDialogue" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="769.0" stylesheets="@../fichierCssListe/StyleDialogueBoxInscription.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerFXMLListe.ControllersDialogueInscription">
+   <children>
+      <Pane id="PaneSaisieInscription" prefHeight="559.0" prefWidth="488.0">
+         <children>
+            <Pane id="paneInscription" layoutX="14.0" layoutY="11.0" prefHeight="554.0" prefWidth="362.0">
+               <children>
+                  <Label id="descriptionLAbel" layoutX="9.0" layoutY="31.0" prefHeight="26.0" prefWidth="65.0" text="NOM">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER" size="1.5em" />
+                     </graphic></Label>
+                  <Label id="descriptionLAbel" layoutX="7.0" layoutY="107.0" prefHeight="26.0" prefWidth="76.0" text="PRENOM">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER" size="1.5em" />
+                     </graphic></Label>
+                  <Label id="descriptionLAbel" layoutX="7.0" layoutY="181.0" prefHeight="26.0" prefWidth="76.0" text="GENRE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="TRANSGENDER" size="1.5em" />
+                     </graphic></Label>
+                  <Label id="descriptionLAbel" layoutX="8.0" layoutY="251.0" prefHeight="26.0" prefWidth="76.0" text="Naissance">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="CALENDAR" size="1.5em" />
+                     </graphic></Label>
+                  <Label id="descriptionLAbel" layoutX="6.0" layoutY="319.0" prefHeight="26.0" prefWidth="76.0" text="ADRESS">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="GLOBE" size="1.5em" />
+                     </graphic></Label>
+                  <Label id="descriptionLAbel" layoutX="7.0" layoutY="387.0" prefHeight="26.0" prefWidth="106.0" text="NATIONNALITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="FLAG" size="1.5em" />
+                     </graphic></Label>
+                  <Label id="descriptionLAbel" layoutX="7.0" layoutY="451.0" prefHeight="26.0" prefWidth="91.0" text="FONCTION">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="SUITCASE" size="1.5em" />
+                     </graphic></Label>
+                  <JFXTextField id="SaisieInfo" fx:id="nomUtillisateur" focusColor="WHITE" layoutX="82.0" layoutY="26.0" prefHeight="36.0" prefWidth="246.0" promptText="Votre nom" unFocusColor="#00b2ff">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <JFXTextField id="SaisieInfo" fx:id="PrenomUtilisateur" focusColor="WHITE" layoutX="90.0" layoutY="101.0" prefHeight="36.0" prefWidth="240.0" promptText="Votre Prenom" unFocusColor="#00bbff">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <JFXTextField id="SaisieInfo" fx:id="addresseUtilisateur" focusColor="WHITE" labelFloat="true" layoutX="88.0" layoutY="316.0" prefHeight="36.0" prefWidth="252.0" promptText="Votre lieu de residence" unFocusColor="#00ddff">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <JFXComboBox id="SaisieInfo" fx:id="combo_genre" focusColor="WHITE" labelFloat="true" layoutX="91.0" layoutY="176.0" prefHeight="36.0" prefWidth="246.0" unFocusColor="#d9ff00" />
+                  <JFXComboBox id="SaisieInfo" fx:id="combo_nationnalite" focusColor="WHITE" labelFloat="true" layoutX="119.0" layoutY="382.0" prefHeight="36.0" prefWidth="218.0" unFocusColor="#fff704" />
+                  <JFXComboBox id="SaisieInfo" fx:id="combo_fontion" focusColor="WHITE" labelFloat="true" layoutX="106.0" layoutY="446.0" prefHeight="36.0" prefWidth="184.0" unFocusColor="#fffb00" />
+                  <Button id="PositionListe" fx:id="btn_ListePosition" layoutX="311.0" layoutY="446.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <JFXDatePicker id="SaisieInfo" fx:id="combo_age" defaultColor="#dfff00" layoutX="90.0" layoutY="246.0" prefHeight="36.0" prefWidth="246.0" showWeekNumbers="true" />
+                  <Label id="AlertChamp" fx:id="alertNom" layoutX="309.0" layoutY="33.0" prefHeight="17.0" prefWidth="13.0" text="!">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="AlertChamp" fx:id="alertPrenom" layoutX="314.0" layoutY="111.0" prefHeight="17.0" prefWidth="13.0" text="!">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="AlertChamp" fx:id="alertGenre" layoutX="306.0" layoutY="184.0" prefHeight="17.0" prefWidth="13.0" text="!">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="AlertChamp" fx:id="alerteDate" layoutX="292.0" layoutY="253.0" prefHeight="17.0" prefWidth="13.0" text="!">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="AlertChamp" fx:id="alertAdress" layoutX="320.0" layoutY="324.0" prefHeight="17.0" prefWidth="13.0" text="!">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="AlertChamp" fx:id="alertNationaliter" layoutX="306.0" layoutY="389.0" prefHeight="17.0" prefWidth="13.0" text="!">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="AlertChamp" fx:id="alertFonction" layoutX="258.0" layoutY="453.0" prefHeight="17.0" prefWidth="13.0" text="!">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="labeleInfo" fx:id="labeleInfochamp" layoutX="57.0" layoutY="494.0" prefHeight="36.0" prefWidth="258.0" text="Tous les champs sont obligoirement à remplir " />
+                  <Button id="buttonAction" fx:id="ValiderDonnerutilisateur" layoutX="151.0" layoutY="498.0" mnemonicParsing="false" text="Valider">
+                     <graphic>
+                        <FontAwesomeIcon fill="#00ffe5" glyphName="SAVE" />
+                     </graphic>
+                  </Button>
+                  <Button id="buttonAction" fx:id="sauvegarderDonnerutilisateur" layoutX="141.0" layoutY="498.0" mnemonicParsing="false" text="Enrigistrer">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SAVE" />
+                     </graphic>
+                     </Button>
+               </children></Pane>
+         </children></Pane>
+      <Pane id="PaneSaisiePhoto" prefHeight="559.0" prefWidth="439.0">
+         <children>
+            <Circle fx:id="circlephotoUtilisateur" fill="GREY" layoutX="180.0" layoutY="271.0" radius="170.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button id="buttonAction" fx:id="ajouterPhotoUtilisateur" layoutX="91.0" layoutY="69.0" mnemonicParsing="false" onAction="#OpenBox" prefHeight="27.0" prefWidth="169.0" text="Ajouter une photo">
+               <graphic>
+                  <FontAwesomeIcon glyphName="DOWNLOAD" />
+               </graphic>
+            </Button>
+            <Button layoutX="320.0" layoutY="540.0" mnemonicParsing="false" onMouseClicked="#ClosedBoxe" style="-fx-background-color: TRANSPARENT;" textFill="#901515">
+               <graphic>
+                  <FontAwesomeIcon id="FermetureBox" glyphName="CIRCLE" />
+               </graphic>
+            </Button>
+            <Label id="labeleInfoStyle" fx:id="labeleInfoPhoto" layoutX="91.0" layoutY="258.0" prefHeight="27.0" prefWidth="169.0" text="Aucune photo n'est choisi" />
+            <Button id="PositionListe" fx:id="btn_ListesPersonnerAjouter" layoutX="318.0" layoutY="8.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="26.0">
+               <font>
+                  <Font name="Leelawadee UI" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="#00ff26" glyphName="USER" />
+               </graphic>
+            </Button>
+            <Label id="AlertChamp" fx:id="AlertpHOTO" layoutX="243.0" layoutY="400.0" prefHeight="17.0" prefWidth="13.0" text="!">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</HBox>

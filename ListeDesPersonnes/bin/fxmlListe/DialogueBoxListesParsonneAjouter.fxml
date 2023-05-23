@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="DialogueboxFonction" fx:id="anchorPane_parent" prefHeight="505.0" prefWidth="409.0" stylesheets="@../fichierCssListe/StyleDialogueFonction.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label id="labelFonction" alignment="CENTER" layoutX="6.0" layoutY="2.0" prefHeight="51.0" prefWidth="395.0" text="LISTES DES PREONNES AJOUTER">
+         <font>
+            <Font name="Lucida Calligraphy Italic" size="14.0" />
+         </font>
+      </Label>
+      <TableView id="tableFonction" fx:id="tableListeAjouter" layoutX="7.0" layoutY="102.0" prefHeight="388.0" prefWidth="395.0">
+        <columns>
+          <TableColumn id="FonctionCulome" fx:id="culomePrenom" prefWidth="195.0" text="Prenom" />
+            <TableColumn id="FonctionCulome" fx:id="culomeNom" prefWidth="195.0" text="Nom" />
+            <TableColumn fx:id="ColumnPhoto" prefWidth="75.0" text="photoProfille" visible="false" />
+            <TableColumn fx:id="ColumnMatricule" prefWidth="75.0" text="MatriculeUtlisateur" visible="false" />
+        </columns>
+      </TableView>
+      <Button id="btnClose" fx:id="closeBtn" layoutX="369.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#CloseDialogueFonction">
+         <graphic>
+            <FontAwesomeIcon id="CloseIcone" fill="#790b0b" glyphName="CIRCLE" />
+         </graphic>
+      </Button>
+      <Circle fx:id="CercleProfillePhotot" fill="DODGERBLUE" layoutX="32.0" layoutY="27.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="LabelleMatricule" alignment="CENTER" layoutX="84.0" layoutY="64.0" prefHeight="24.0" prefWidth="227.0" text="MatriculePersonne" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPaneTotale" fx:id="AnchorComponante" focusTraversable="true" prefHeight="743.0" prefWidth="1304.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FXMMaJournerController">
+   <children>
+      <BorderPane id="transparentDraw" fx:id="PageNavigationAvecConnexion" prefHeight="753.0" prefWidth="888.0" />
+      <BorderPane id="transparentDraw" fx:id="PageNavigationSansConnexion" prefHeight="753.0" prefWidth="888.0" />
+      <BorderPane id="transparentDraw" fx:id="sliderPage" prefHeight="753.0" prefWidth="1273.0" />
+      <BorderPane id="transparentDraw" fx:id="slider" prefHeight="745.0" prefWidth="1273.0" />
+      <Pane fx:id="buttonMenuConnection" layoutX="1307.0" layoutY="662.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: black; -fx-border-radius: 5em;">
+         <children>
+            <JFXHamburger fx:id="icon" layoutX="6.0" layoutY="6.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXHamburger>
+         </children>
+      </Pane>
+      <Pane layoutX="1305.0" layoutY="39.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: black; -fx-border-radius: 5em;">
+         <children>
+            <ImageView fitHeight="19.0" fitWidth="21.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/hand_cursor.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="1274.0" layoutY="72.0" prefHeight="28.0" prefWidth="81.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 2em;">
+         <children>
+            <HBox layoutX="3.0" layoutY="5.0" prefHeight="17.0" prefWidth="51.0">
+               <children>
+                  <Circle fill="#2141ff" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#4cff1f" radius="8.0" stroke="BLACK" strokeType="INSIDE" style="-fx-border-color: black;" />
+                  <Circle fill="#ff1f1f" radius="8.0" stroke="BLACK" strokeType="INSIDE" style="-fx-border-color: black;" />
+               </children>
+            </HBox>
+            <Pane fx:id="buttonMenu1" layoutX="60.0" layoutY="-1.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: black; -fx-border-radius: 5em;">
+               <children>
+                  <JFXHamburger fx:id="iconeMenu" layoutX="6.0" layoutY="5.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: white;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXHamburger>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="paneAcceillieUtilisateur" fx:id="MainAccuile1" layoutX="945.0" layoutY="92.0" prefHeight="589.0" prefWidth="332.0">
+         <children>
+            <AnchorPane id="panenavigationInfoClique" layoutX="13.0" layoutY="5.0" prefHeight="28.0" prefWidth="306.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="62.0" layoutY="2.0" prefHeight="24.0" prefWidth="185.0" text="Chemain" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="paneNAvigation" layoutX="7.0" layoutY="46.0" prefHeight="524.0" prefWidth="44.0">
+               <children>
+                  <Pane layoutX="8.0" layoutY="487.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: black; -fx-border-radius: 5em;">
+                     <children>
+                        <JFXHamburger fx:id="icon1" layoutX="6.0" layoutY="5.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: white;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXHamburger>
+                     </children>
+                  </Pane>
+                  <Button id="btniconenavigationJourne" layoutX="5.0" layoutY="14.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="MUSIC" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="3.0" layoutY="45.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="IMAGE" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="5.0" layoutY="453.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="BELL" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="6.0" layoutY="423.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="USER" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="6.0" layoutY="355.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="COG" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="7.0" layoutY="386.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="29.0">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="QUESTION" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="6.0" layoutY="283.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="PENCIL" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="6.0" layoutY="315.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="PENCIL" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="6.0" layoutY="219.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="PENCIL" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="6.0" layoutY="251.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="PENCIL" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="5.0" layoutY="147.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="STAR" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="5.0" layoutY="188.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="BOOK" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="5.0" layoutY="116.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="SEARCH" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btniconenavigationJourne" layoutX="6.0" layoutY="75.0" mnemonicParsing="false">
+                     <graphic>
+                        <FontAwesomeIcon id="iconenavigationJourne" fill="#cfbece" glyphName="FILE" size="1.5em" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Separator layoutX="4.0" layoutY="416.0" opacity="0.36" prefHeight="3.0" prefWidth="36.0" />
+                  <Separator layoutX="5.0" layoutY="347.0" opacity="0.36" prefHeight="3.0" prefWidth="36.0" />
+                  <Separator layoutX="4.0" layoutY="178.0" opacity="0.36" prefHeight="3.0" prefWidth="36.0" />
+                  <Separator layoutX="4.0" layoutY="106.0" opacity="0.36" prefHeight="3.0" prefWidth="36.0" />
+               </children></AnchorPane>
+            <Pane id="journerStyle0" layoutX="58.0" layoutY="39.0" prefHeight="542.0" prefWidth="264.0">
+               <children>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="5.0" prefHeight="44.0" prefWidth="251.0">
+                     <children>
+                        <Button layoutX="10.0" layoutY="8.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="OUT" />
+                           </graphic>
+                        </Button>
+                        <Label layoutX="49.0" layoutY="14.0" prefHeight="17.0" prefWidth="44.0" text="Label" />
+                     </children></Pane>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+               </children></Pane>
+            <Pane id="journerStyle1" layoutX="58.0" layoutY="39.0" prefHeight="542.0" prefWidth="264.0">
+               <children>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="5.0" prefHeight="44.0" prefWidth="251.0">
+                     <children>
+                        <Button layoutX="10.0" layoutY="8.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="OUT" />
+                           </graphic>
+                        </Button>
+                        <Label layoutX="49.0" layoutY="14.0" prefHeight="17.0" prefWidth="44.0" text="Label" />
+                     </children>
+                  </Pane>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+               </children>
+            </Pane>
+            <Pane id="journerStyle2" layoutX="58.0" layoutY="39.0" prefHeight="542.0" prefWidth="264.0">
+               <children>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="5.0" prefHeight="44.0" prefWidth="251.0">
+                     <children>
+                        <Button layoutX="10.0" layoutY="8.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="OUT" />
+                           </graphic>
+                        </Button>
+                        <Label layoutX="49.0" layoutY="14.0" prefHeight="17.0" prefWidth="44.0" text="Label" />
+                     </children>
+                  </Pane>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+               </children>
+            </Pane>
+            <Pane id="journerStyle3" layoutX="58.0" layoutY="39.0" prefHeight="542.0" prefWidth="264.0">
+               <children>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="5.0" prefHeight="44.0" prefWidth="251.0">
+                     <children>
+                        <Button layoutX="10.0" layoutY="8.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="OUT" />
+                           </graphic>
+                        </Button>
+                        <Label layoutX="49.0" layoutY="14.0" prefHeight="17.0" prefWidth="44.0" text="Label" />
+                     </children>
+                  </Pane>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+               </children>
+            </Pane>
+            <Pane id="journerStyle4" layoutX="58.0" layoutY="39.0" prefHeight="542.0" prefWidth="264.0">
+               <children>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="5.0" prefHeight="44.0" prefWidth="251.0">
+                     <children>
+                        <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="ARROW-RIGHT" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label id="LabelUtilisateurNom" layoutX="75.0" layoutY="3.0" prefHeight="17.0" prefWidth="95.0" text="Nom Utilisateur" />
+                        <Button id="SyleBoutontransparent" layoutX="216.0" layoutY="9.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon fill="#2200ff7e" glyphName="PENCIL" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label id="LabelUtilisateurNom" layoutX="39.0" layoutY="24.0" prefHeight="17.0" prefWidth="173.0" text="Chemain" />
+                     </children>
+                  </Pane>
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="479.0" prefWidth="251.0" />
+                  <Pane id="paneSyleAcceuille" layoutX="7.0" layoutY="53.0" prefHeight="483.0" prefWidth="251.0">
+                     <children>
+                        <Pane id="panePhotoCouverture" layoutX="60.0" layoutY="6.0" prefHeight="95.0" prefWidth="125.0">
+                           <children>
+                              <ImageView fitHeight="85.0" fitWidth="112.0" layoutX="21.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8_person_70px.png" />
+                                 </image>
+                              </ImageView>
+                              <Button id="SyleBoutontransparent" layoutX="92.0" layoutY="4.0" mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#c3abab" glyphName="CAMERA" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane id="paneProfilleUtilisateur" layoutX="101.0" layoutY="76.0" prefHeight="44.0" prefWidth="44.0">
+                           <children>
+                              <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8_male_user_70px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label id="labaleNomUtilisateur" layoutX="21.0" layoutY="118.0" prefHeight="27.0" prefWidth="204.0" text="Nom et prenom utilisateur" />
+                        <Button id="SyleBoutontransparent" layoutX="130.0" layoutY="99.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon fill="#c3abab" glyphName="CAMERA" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Separator id="separateur" layoutX="11.0" layoutY="144.0" prefHeight="3.0" prefWidth="223.0" />
+                        <Button id="SyleBoutontransparent" layoutX="221.0" layoutY="149.0" mnemonicParsing="false">
+                           <graphic>
+                              <FontAwesomeIcon fill="#2200ff7e" glyphName="PENCIL" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label id="labaleNomUtilisateur" layoutX="18.0" layoutY="149.0" prefHeight="27.0" prefWidth="204.0" text="changer vos information" />
+                        <Button id="SyleBouton" layoutX="29.0" layoutY="440.0" mnemonicParsing="false" text="Voir vos information à propos">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeInfoUtilisateur" fill="#551687" glyphName="SCHOOL" size="1.5em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="SyleBouton" layoutX="27.0" layoutY="178.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="185.0" text="Travaile Chez : lieu de travail" wrapText="true">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeInfoUtilisateur" fill="#551687" glyphName="SUITCASE" size="1.5em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="SyleBouton" layoutX="27.0" layoutY="228.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="204.0" text="Habite à :  Djoumoichongo, Angazidja, Comores, " wrapText="true">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeInfoUtilisateur" fill="#551687" glyphName="HOME" size="1.5em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="SyleBouton" layoutX="27.0" layoutY="287.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="204.0" text="De  :  Djoumoichongo, Angazidja,  Comores" wrapText="true">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeInfoUtilisateur" fill="#551687" glyphName="GLOBE" size="1.5em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="SyleBouton" layoutX="28.0" layoutY="338.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="173.0" text="nombre d'abonnements">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeInfoUtilisateur" fill="#551687" glyphName="USERS" size="1.5em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="SyleBouton" layoutX="27.0" layoutY="388.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="204.0" text="Vos photo Enrigistrées dans votre espace privé" wrapText="true">
+                           <graphic>
+                              <FontAwesomeIcon id="iconeInfoUtilisateur" fill="#551687" glyphName="IMAGE" size="1.5em" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="paneNavigationDroite" layoutX="1280.0" layoutY="101.0" prefHeight="559.0" prefWidth="83.0">
+         <children>
+            <Separator layoutX="4.0" layoutY="119.0" opacity="0.19" prefHeight="3.0" prefWidth="74.0" />
+            <Separator layoutX="4.0" layoutY="381.0" opacity="0.19" prefHeight="3.0" prefWidth="74.0" />
+            <AnchorPane layoutX="14.0" layoutY="33.0" prefHeight="53.0" prefWidth="51.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 20em;">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_male_user_70px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="66.0" layoutY="127.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="66.0" layoutY="159.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="66.0" layoutY="196.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="67.0" layoutY="237.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="69.0" layoutY="278.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="69.0" layoutY="312.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="68.0" layoutY="346.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="68.0" layoutY="387.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="68.0" layoutY="420.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Separator layoutX="4.0" layoutY="452.0" opacity="0.24" prefHeight="3.0" prefWidth="74.0" />
+            <Separator layoutX="4.0" layoutY="229.0" opacity="0.19" prefHeight="3.0" prefWidth="74.0" />
+            <Separator layoutX="4.0" layoutY="272.0" opacity="0.19" prefHeight="3.0" prefWidth="74.0" />
+            <Separator layoutX="4.0" layoutY="497.0" opacity="0.19" prefHeight="3.0" prefWidth="74.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="507.0" prefHeight="17.0" prefWidth="64.0" style="-fx-background-color: #BC8F8F; -fx-background-radius: 5em;" text="Un comptes" textAlignment="CENTER" textFill="#fcfcfc" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="24.0" fitWidth="21.0" layoutX="29.0" layoutY="532.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_plus_43px.png" />
+               </image>
+            </ImageView>
+            <Button id="buttondeclancheurPane" layoutX="8.0" layoutY="127.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="buttondeclancheurPane2" layoutX="7.0" layoutY="280.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="buttondeclancheurPane2" layoutX="8.0" layoutY="314.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="buttondeclancheurPane2" layoutX="8.0" layoutY="348.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="buttondeclancheurPane3" layoutX="9.0" layoutY="387.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="buttondeclancheurPane3" layoutX="9.0" layoutY="422.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="buttondeclancheurPane" layoutX="8.0" layoutY="161.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="buttondeclancheurPane" layoutX="8.0" layoutY="198.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="buttondeclancheurPane1" layoutX="8.0" layoutY="239.0" mnemonicParsing="false">
+               <graphic>
+                  <FontAwesomeIcon id="iconeDroiteNavigation" fill="#c9c9c9" glyphName="PENCIL" size="1.5em" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <JFXButton fx:id="seConnecterEnLing" buttonType="RAISED" layoutX="4.0" layoutY="464.0" onAction="#EtreEnLinge" prefHeight="23.0" prefWidth="74.0" text="Connection" textFill="#aea9a9" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon fill="#83a3c7" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="9.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="paneNavigationIcones" fx:id="BarMainAccuile" layoutX="946.0" layoutY="30.0" prefHeight="60.0" prefWidth="332.0">
+         <children>
+            <Label layoutX="101.0" layoutY="39.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 5em;" text="1" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="85.0" layoutY="9.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/edit_property.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="157.0" layoutY="8.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/notification.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="230.0" layoutY="8.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/light.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="295.0" layoutY="7.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/administrative_tools.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="11.0" layoutY="10.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="164.0" layoutY="39.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 5em;" text="1" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="238.0" layoutY="38.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 5em;" text="1" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="302.0" layoutY="38.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 5em;" text="1" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../fichierCss/stylejourner.css" />
+      <URL value="@../fichierCss/Transparence.css" />
+   </stylesheets>
+</AnchorPane>

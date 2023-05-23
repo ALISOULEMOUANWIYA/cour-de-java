@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="499.0" prefWidth="629.0" style="-fx-background-color: rgb(255,255, 255,.2);;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FichierControllersFXML.ControllersPaginationListe">
+   <children>
+      <Pagination fx:id="PaginationListe" layoutX="14.0" layoutY="59.0" maxPageIndicatorCount="5" prefHeight="427.0" prefWidth="602.0" />
+      <TableView fx:id="tableauListes" layoutX="14.0" layoutY="83.0" prefHeight="360.0" prefWidth="602.0">
+        <columns>
+            <TableColumn fx:id="tableauId" minWidth="0.0" prefWidth="52.0" text="id" visible="false" />
+          <TableColumn fx:id="tableauFonctions" prefWidth="649.0" text="Fonction" />
+        </columns>
+      </TableView>
+      <Pane layoutX="14.0" layoutY="13.0" prefHeight="70.0" prefWidth="602.0" style="-fx-background-color: #4e4e4e; -fx-background-radius: 2em 2em 0em 0em;">
+         <children>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="577.0" style="-fx-background-color: #686464; -fx-background-radius: 1em 0 1em 0;" text="Listes des fonctions">
+               <font>
+                  <Font name="Imprint MT Shadow" size="29.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#47ab33" />
+                        <Stop color="#47ab33" offset="0.44061302681992337" />
+                        <Stop color="#9e9c9c" offset="0.6628352490421454" />
+                        <Stop color="#9e9c9c" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>

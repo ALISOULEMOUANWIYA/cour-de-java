@@ -1,0 +1,29 @@
+
+#EnplacemetntPhoto{
+-fx-background-radius: 5;
+-fx-text-fill: white;
+-fx-text-alignment: center ;
+-fx-background-color: #228B22;
+}
+#Photolient{
+	-fx-background-color: rgb(255, 255, 255, .2);
+	-fx-background-radius: 5;
+	-fx-text-fill: white;
+	-fx-border-color: #ccf6f3;
+}
+#Photolient:hover{
+ -fx-background-color: #667788;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-text-alignment: CENTER ;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 10;
+}
+#NomUtlisateur,#PrenomUtilisateur{
+	-fx-background-radius: 2;
+	-fx-text-fill: white;
+	-fx-text-alignment: center ;
+	-fx-background-color: #9400D3;
+}
+

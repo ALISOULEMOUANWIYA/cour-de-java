@@ -1,0 +1,591 @@
+
+AnchorPane{
+    /*-fx-background-color :  rgb(255,255, 255,.2);*/
+    /*-fx-background-color :  #696969;*/
+    -fx-background-color :  #353535;	
+    -fx-border-color: #ccf6f3;
+    -fx-background-radius:  2em;
+    -fx-border-radius: 2em;
+}
+#anchePane{
+	 -fx-background-color :  rgb(255,255, 255,.2);
+     -fx-border-color: #ccf6f3;
+	 -fx-background-radius:  0.5em;
+	 -fx-border-radius: 0.5em;
+}
+#menubareNavigation{
+	-fx-background-color : rgb(95,158,160);
+		-fx-border-color: #ccf6f3;
+	-fx-background-radius :  5em;
+	-fx-border-radius: 5em;
+}
+Pane{
+	-fx-background-color :  #4e4e4e;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color: #ccf6f3;
+}
+#tAbleLIste{
+	-fx-background-color :  #696969;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 5em;
+}
+#photoPane{
+	-fx-background-color : black;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+}
+
+#PaneSercher{
+	-fx-background-color : rgb(255,255, 255,.2);
+	-fx-background-radius:  2em;
+	-fx-text-fill: white;
+	-fx-alignment: center ;
+	-fx-border-radius: 2em;
+	-fx-border-color: #ccf6f3;
+}
+#iconeSearche{
+	-fx-fill: blue;
+}
+#iconeSearche:hover{
+	-fx-fill: #FFA07A;
+}
+#iconeSearche:pressed{
+ 	-fx-fill: white;
+}
+#Selectionmodifier:hover{
+ -fx-background-color: #008B8B;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: #000000;
+ -fx-border-radius: 20;
+ -fx-rotate: 3;
+}
+
+#Selectionmodifier:pressed{
+ -fx-background-color: #00FFFF;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+/* 
+#TableColumnInfo{
+ -fx-background-radius: 5;
+ -fx-text-fill: white;
+ -fx-border-color: #000000;
+ -fx-border-radius: 5;
+}
+#TableColumnInfo:hover{
+ -fx-background-color: white;
+ -fx-background-radius: 22;
+ -fx-fill: black;
+ -fx-border-color: #000000;
+ -fx-border-radius: 20;
+ -fx-rotate: 3;
+}
+*/
+#iconeTable{
+	-fx-fill : #00FF7F;
+}
+#Labelutulisateur{
+	-fx-text-fill : #00FF7F;
+	-fx-alignment: CENTER;
+}
+
+#TableColumnInfo:pressed > #iconeTable{
+	-fx-fill : white;
+}
+/*--------------------------------------------------------------------------------*/
+
+
+#idButtonParcourir,
+#ButtonChoix ,
+#AjouterListe,
+#preView,
+#exporterVers,
+#Selectionmodifier,
+#SelectionSuprimer{
+	
+ -fx-background-color: transparent;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+ -fx-border-radius: 20;
+}
+
+#ButtonChoix:hover,
+#AjouterListe:hover,
+#preView:hover,
+#exporterVers:hover,
+#Selectionmodifier:hover,
+#SelectionSuprimer:hover{
+ -fx-background-color: #778899;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: 5;
+}
+#idButtonParcourir:hover{
+ -fx-background-color: #778899;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+#ButtonChoix:pressed,
+#AjouterListe:pressed,
+#AjouterListe:pressed,
+#preView:pressed{
+ -fx-background-color: #2E8B57;
+ -fx-background-radius: 22;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+
+#SelectionSuprimer:pressed{
+ -fx-background-color: red;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+#Selectionmodifier:pressed{
+ -fx-background-color: #800080;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+#exporterVers:pressed{
+ -fx-background-color: #00FF7F;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+#exporterVers:pressed > #exporterIcone,
+#Selectionmodifier:pressed > #idetieEcone,
+#SelectionSuprimer:pressed > #removeIcone,
+#AjouterListe:pressed > #ajouterIcone{
+	-fx-fill: white;
+}
+
+#AjouterListe:pressed > #ajouterIcone{
+	-fx-fill: black;
+}
+#idButtonParcourir:pressed{
+ -fx-background-color: #2E8B57;
+ -fx-background-radius: 22;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -5;
+}
+
+#SauvegardeModifucation{
+ -fx-background-color: #E6E6FA;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: blue;
+ -fx-border-radius: 20;
+}
+#SauvegardeModifucation:hover{
+ -fx-background-color: #FF00FF;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: white;
+ -fx-border-radius: 20;
+ -fx-rotate: 2;
+}
+#SauvegardeModifucation:pressed{
+ -fx-background-color: red;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -2;
+}
+
+
+#SuprimerSelection{
+ -fx-background-color: #E6E6FA;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: blue;
+ -fx-border-radius: 20;
+}
+#SuprimerSelection:hover{
+ -fx-background-color: #00FF00;
+ -fx-background-radius: 22;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: white;
+ -fx-border-radius: 20;
+ -fx-rotate: 2;
+}
+#SuprimerSelection:pressed{
+ -fx-background-color: #6495ED;
+ -fx-background-radius: 22;
+ -fx-text-fill: white;
+ -fx-border-color: #ccf6f3;
+ -fx-border-radius: 20;
+ -fx-rotate: -2;
+}
+
+#MenuButton, #btnCloseFenetre{
+	-fx-background-color: transparent;
+ 	
+}
+#MenuButton:hover{
+	-fx-background-color: rgb(250, 250, 250, 0.2);
+ 	-fx-border-color: #ccf6f3;
+}
+#MenuButton:pressed{
+	-fx-background-color: #B0E0E6;
+	 -fx-background-radius: 20;
+	 -fx-font-weight: bold;
+	 -fx-border-radius: 20;
+ 	-fx-border-color: #ccf6f3;
+}
+#btnCloseFenetre:pressed{
+	-fx-background-color: #B0E0E6;
+	 -fx-background-radius: 20;
+	 -fx-font-weight: bold;
+	 -fx-border-radius: 20;
+ 	-fx-border-color: black;
+}
+
+#MenuButton:pressed > #identMenu{
+ 	-fx-fill: #2F4F4F;
+}
+
+#iconeCloseFenetre{
+	-fx-fill: #A52A2A;
+}
+#iconeCloseFenetre:hover{
+	-fx-fill: #228B22;
+}
+
+#btnCloseFenetre:pressed > #iconeCloseFenetre{
+ 	-fx-fill: red;
+}
+
+#SearcheBtn{
+	-fx-background-color:  transparent;
+}
+/********************************************************************************************************************************************/
+#tabPanel{
+	-fx-background-color:  #808080;
+}
+#PaneRaport{
+	-fx-background-color:  transparent;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color: #ccf6f3;
+}
+#PaneRaport:hover{
+	-fx-background-color:  #524e4eb5;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color:white;
+}
+
+
+#boutonFichierJasperSoft, #ListeRaport{
+	-fx-background-color: transparent;
+}
+#boutonFichierJasperSoft:hover{
+	-fx-background-color: rgb(250, 250, 250, 0.2);
+ 	-fx-border-color: #ccf6f3;
+}
+#boutonFichierJasperSoft:pressed{
+	-fx-background-color: #B0E0E6;
+	 -fx-background-radius: 22;
+	 -fx-font-weight: bold;
+	 -fx-border-radius: 20;
+ 	-fx-border-color: #ccf6f3;
+}
+#boutonFichierJasperSoft:pressed > #IconFielJasport{
+ 	-fx-fill: #2F4F4F;
+}
+#ButtonReduireFichierJaspert{
+	-fx-background-color: transparent;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+ 	-fx-border-color: #ccf6f3;
+}
+#buttonJaspertParcourir{
+	-fx-background-color: transparent;
+	-fx-text-fill: #4e4e4ed6;
+}
+#ButtonReduireFichierJaspert:hover{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+ 	-fx-border-color: blue;
+}
+#ButtonReduireFichierJaspert:pressed{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+ 	-fx-border-color: red;
+}
+#buttonJaspertParcourir:hover{
+	-fx-background-color: rgb(250, 250, 250, 0.2);
+	-fx-background-radius:  2em;
+	-fx-text-fill: #4c8bf5;
+	-fx-font-weight: bold;
+	-fx-border-radius: 2em;
+ 	-fx-border-color: #ccf6f3;
+}
+#buttonJaspertParcourir:pressed{
+	-fx-background-color: #B0E0E6;
+	 -fx-background-radius: 22;
+	 -fx-font-weight: bold;
+	 -fx-text-fill: #4e4e4ed6;
+	 -fx-border-radius: 20;
+ 	-fx-border-color: #ccf6f3;
+}
+#buttonJaspertParcourir:hover > #iconsParcourirFichierJaspert{
+ 	-fx-fill: white;
+}
+#fenetreIconner{
+	-fx-background-color:  #808080;
+	-fx-font-weight: bold;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color: #ccf6f3;
+}
+#fenetreIconner:hover{
+	-fx-background-color: transparent;
+	 -fx-font-weight: bold;
+	 -fx-text-fill: white;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color: #ccf6f3;
+}
+#fenetreIconner:hover > #iconsFenetre{
+ 	-fx-fill: #00c4ff;
+}
+#ListeRaport{
+	-fx-text-fill: white;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color: #ccf6f3;
+}
+/******************************************************************************/
+#PaneRaportParametre{
+	-fx-background-color:  transparent;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+}
+
+#butonConsultation{
+	-fx-background-color: transparent;
+}
+#butonConsultation:hover{
+	 -fx-background-color :  rgb(255,255, 255,.2);
+     -fx-border-color: #ccf6f3;
+	 -fx-background-radius:  0.5em;
+	 -fx-border-radius: 0.5em;
+}
+#PaneRaportParametre:hover{
+	-fx-background-color:  transparent;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color: #0000;
+}
+#labelParametreConsultation{
+	 -fx-font-weight: bold;
+	-fx-background-radius:  0em;
+	-fx-border-radius: 0em;
+	-fx-border-color: #ccf6f3;
+}
+#labelParametreConsultation:hover{
+	 -fx-font-weight: bold;
+	 -fx-text-fill: white;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color: #ccf6f3;
+}
+/******************************************************************************/
+#BarreMenuRotate{
+	-fx-background-color :  #4e4e4e;
+	-fx-background-radius:  0em;
+	-fx-border-radius: 0em;
+	-fx-border-color: #ccf6f3;
+}
+#BarreMenuRotate:hover{
+	-fx-border-color: blue;
+}
+#listeButtonBarMenu, #ListeMenu1, #ListeMenu2, #DirectionBarMenu{
+	-fx-background-color: transparent;
+	 -fx-text-fill: white;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+}
+
+/******************************************************************************/
+#ScrollPaneCompteUtilisateur{
+	-fx-background-color :  #4e4e4e;
+}
+#anchorpaneCompte{
+	 -fx-background-color :  #4e4e4e;
+	 -fx-background-radius:  0em;
+    -fx-border-color:  #4e4e4e;
+	 -fx-border-radius: 0em;
+
+}
+#borderpane{
+	-fx-background-color: transparent;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+}
+/************************************************* Style de l'acceuille *****************************************/
+#anchePaneaccueille{
+	 -fx-background-color :  #4e4e4e;
+     -fx-border-color: #4e4e4e;
+}
+#Paneaccueille{
+	 -fx-background-color :  #4e4e4e;
+     -fx-border-color: #4e4e4e;
+}
+#BarrePaneVerticale{
+	 -fx-background-color :  #4e4e4e;
+     -fx-border-color: #4e4e4e;	
+}
+#bouttonListaDataBase ,
+#bouttonListaParametre ,
+#bouttonListeAide ,
+#bouttonModificationCompteProfile{
+	-fx-background-color: transparent;
+	 -fx-text-fill: white;
+	-fx-background-radius:  5em;
+	-fx-border-radius: 5em;
+}
+#bouttonListaDataBase:hover ,
+#bouttonListaParametre:hover ,
+#bouttonListeAide:hover ,
+#bouttonModificationCompteProfile:hover {
+	-fx-background-color: rgb(250, 250, 250, 0.2);
+}
+#IconsDatabaseListesControllers{
+		-fx-fill: linear-gradient(to bottom, #21d190 0%, #d65bca 74%);
+}
+#bouttonListaDataBase:hover > #IconsDatabaseListesControllers,
+#bouttonModificationCompteProfile:hover > #iconsModifierCompteProfille{
+    -fx-fill: linear-gradient(to bottom, rgb(95,158, 05), rgb(33 ,49 ,47));
+}
+#bouttonListaDataBase:pressed ,
+#bouttonListaParametre:pressed ,
+#bouttonListeAide:pressed ,
+#bouttonModificationCompteProfile:pressed {
+	-fx-background-color: transparent;
+	 -fx-font-weight: bold;
+}
+#bouttonListaDataBase:pressed > #IconsDatabaseListesControllers,
+#bouttonModificationCompteProfile:pressed > #iconsModifierCompteProfille{
+ 	-fx-fill:linear-gradient(to top, #90d5ec 0%, #fc575e 74%);
+ 
+}
+
+/********************************************** Style Login************************************************/
+#ancorpaneLogine{
+     -fx-background-color: linear-gradient(to top, #000000 30%, #4e4e4e 74%);
+}
+#PaneSliderLogin{
+	 -fx-background-color : #000000;
+     -fx-border-color: #000000;	
+     -fx-background-radius:  2em;
+	 -fx-border-radius: 2em;
+}
+#buttonMenuLogin{
+	 -fx-background-color : #fff;
+	 -fx-border-color: blue;
+	 -fx-background-radius:  2em;
+	 -fx-border-radius: 2em;
+}
+#ButtonLogin, 
+#ButtonLoginInscription{
+ -fx-background-color: transparent;
+ -fx-background-radius: 20;
+ -fx-text-fill: white;
+ -fx-border-color: #5F9EA0;
+ -fx-border-radius: 20;
+}
+#ButtonLogin:hover{
+ -fx-background-color: white;
+ -fx-text-fill: black;
+ -fx-font-weight: bold;
+ -fx-border-color: white;
+}
+#ButtonLogin:pressed{
+ -fx-background-color: #12ff01;
+ -fx-text-fill: black;
+ -fx-border-color: blue;
+}
+#ButtonLoginInscription:hover{
+ -fx-background-color: blue;
+ -fx-font-weight: bold;
+ -fx-border-color: white;
+}
+#ButtonLoginInscription:pressed{
+ -fx-background-color: white;
+ -fx-text-fill: black;
+ -fx-border-color: blue;
+}
+#MenuButtinStyleControllersUtilisateur{ 
+	 -fx-background-color : transparent;
+	 -fx-font-weight: bold;
+     -fx-border-color: white;
+	 -fx-background-radius:  2em;
+	 -fx-border-radius: 2em;
+}
+#comboBoxStyle{
+	 -fx-background-color : #ccc;
+	 -fx-border-color: blue;
+	 -fx-background-radius:  2em;
+	 -fx-border-radius: 2em;	
+}
+#champsSaisieDateLogin{
+	 -fx-border-radius: 2em 2em 0 0;
+	 -fx-text-fill: #cccccc;
+}
+#CheckBoxButtonLogin{
+	-fx-cursor : default;
+}
+#CheckBoxButtonLogin:hover{
+	-fx-cursor : hand;
+}
+
+#CheckBoxButtonLogin:pressed{
+	-fx-cursor : wait;
+}
+#champsSaisieLogin{
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+  -fx-alignment : center;
+}
+#champsSaisieLogin:hover{
+  -fx-text-fill: #b5b5b5;
+  -fx-alignment : center;
+}

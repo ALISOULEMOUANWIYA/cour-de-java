@@ -1,0 +1,21 @@
+
+#EnplacemetntPhoto{
+-fx-background-radius: 5;
+-fx-text-fill: white;
+-fx-text-alignment: center ;
+-fx-background-color: #228B22;
+}
+ 
+#NomUtlisateur,#PrenomUtilisateur{
+	-fx-background-radius: 2;
+	-fx-text-fill: white;
+	-fx-text-alignment: center ;
+	-fx-background-color: #9400D3;
+}
+
+#DescriptionTexte{
+	-fx-background-color: rgb(255,255, 255, .2);
+	-fx-background-radius: 5;
+	-fx-text-fill: white;
+	-fx-text-alignment: center ;
+}

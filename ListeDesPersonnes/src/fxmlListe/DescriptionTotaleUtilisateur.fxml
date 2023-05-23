@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpaneDescription" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0" prefWidth="220.0" stylesheets="@../fichierCssListe/DescripitionStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerFXMLListe.controllersGrideCompte">
+   <children>
+      <Circle fx:id="CirclePhototcouverture" fill="DODGERBLUE" layoutX="55.0" layoutY="55.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label id="utulisateurDescription" fx:id="NomCompte" alignment="CENTER" layoutX="18.0" layoutY="83.0" prefHeight="23.0" prefWidth="178.0" text="Nom" />
+      <Button id="buttonDescription" fx:id="InscriptionCompte" layoutX="112.0" layoutY="158.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="103.0" text="inscrit: Utlisateur">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/how-to-write-a-perfect-reflection-paper-image4.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="buttonDescription" fx:id="AgeCompte" layoutX="57.0" layoutY="182.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="104.0" text="age : Utlisateur">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/birthday.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button id="buttonDescription" fx:id="AddressCompte" layoutX="4.0" layoutY="134.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="105.0" text="Address : Utlisateur">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/Localisation.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="buttonDescription" fx:id="GenreCompte" layoutX="4.0" layoutY="110.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="105.0" text="Genr : Utlisateur">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/GENREDARY.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="buttonDescription" fx:id="FonctionCompte" layoutX="113.0" layoutY="135.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="103.0" text="Fonction : Utlisateur">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/mallette.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle fx:id="CirclePhotoProfile" fill="#3a444d" layoutX="110.0" layoutY="58.0" radius="30.0" stroke="#867c7c" strokeType="INSIDE" />
+      <Button id="DescriptionModifier" fx:id="ModiferiComptePhotoProfile" layoutX="106.0" layoutY="64.0" mnemonicParsing="false">
+         <graphic>
+            <FontAwesomeIcon id="iconeModifier" fill="#18ff00" glyphName="CAMERA" />
+         </graphic>
+      </Button>
+      <Button id="buttonDescription" fx:id="NaissanceCompte" layoutX="112.0" layoutY="111.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="103.0" text="Naissance : Utlisateur">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="10.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/DATENAISSANCE.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="DescriptionModifier" fx:id="modifierComptephotoCOuverture" layoutX="9.0" layoutY="43.0" mnemonicParsing="false">
+         <graphic>
+            <FontAwesomeIcon id="iconeModifier" fill="#18ff00" glyphName="CAMERA" />
+         </graphic>
+      </Button>
+      <Button id="buttonDescription" fx:id="NationaliteCompte" layoutX="3.0" layoutY="158.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="105.0" text="Nationalite : Utlisateur">
+         <font>
+            <Font size="8.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/Language_Icon_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <MenuButton id="DescriptionModifier" fx:id="menuItemetacheChoix" layoutX="173.0" layoutY="82.0" mnemonicParsing="false">
+        <items>
+          <MenuItem fx:id="ButtonModifer" mnemonicParsing="false" text="Modifier                    CTRL + D + S">
+               <graphic>
+                  <FontAwesomeIcon glyphName="PENCIL" />
+               </graphic>
+            </MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="buttonSuprimer" mnemonicParsing="false" onAction="#SuprimerCompteUtilisateur" text="Supprimer                CTRL + X + S">
+               <graphic>
+                  <FontAwesomeIcon glyphName="TRASH" />
+               </graphic>
+            </MenuItem>
+        </items>
+         <graphic>
+            <FontAwesomeIcon fill="#dd7c7c" glyphName="PENCIL" />
+         </graphic>
+      </MenuButton>
+      <Label id="MatriculeDescription" fx:id="MAtriculeCompte" alignment="CENTER" layoutX="53.0" layoutY="5.0" prefHeight="23.0" prefWidth="158.0" text="Matriculation : Utilisateur" />
+      <Label fx:id="labelCompteSuprimer" layoutX="12.0" layoutY="180.0" text="X" textFill="RED">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

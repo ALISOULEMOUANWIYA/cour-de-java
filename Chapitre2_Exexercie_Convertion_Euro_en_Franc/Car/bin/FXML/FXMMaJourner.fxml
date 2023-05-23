@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="743.0" prefWidth="1366.0" style="-fx-background-color: rgba(100,0,0,0); -fx-background-radius: 3em;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FXMMaJournerController">
+   <children>
+      <JFXDrawer direction="RIGHT" layoutX="1363.0" layoutY="-3.0" prefHeight="747.0" prefWidth="3.0" />
+      <AnchorPane fx:id="BarMainAccuile" layoutX="793.0" layoutY="25.0" prefHeight="59.0" prefWidth="395.0" style="-fx-background-color: #000000; -fx-background-radius: 5em; -fx-border-color: #FFFACD; -fx-border-radius: 2em;">
+         <children>
+            <Label layoutX="116.0" layoutY="39.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 5em;" text="1" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="106.0" layoutY="9.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/edit_property.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="170.0" layoutY="8.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/notification.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="239.0" layoutY="8.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/light.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="315.0" layoutY="7.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/administrative_tools.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="38.0" layoutY="10.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="179.0" layoutY="39.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 5em;" text="1" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="38.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 5em;" text="1" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="38.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10em; -fx-border-color: red; -fx-border-radius: 5em;" text="1" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1194.0" layoutY="98.0" prefHeight="559.0" prefWidth="165.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 2em; -fx-border-color: #FFFACD; -fx-border-radius: 2em;">
+         <children>
+            <Separator layoutY="119.0" prefHeight="3.0" prefWidth="169.0" />
+            <Separator layoutX="1.0" layoutY="381.0" prefHeight="3.0" prefWidth="169.0" />
+            <AnchorPane layoutX="31.0" layoutY="27.0" prefHeight="71.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 20em;">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="32.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/modification_User.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="124.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="148.0" layoutY="126.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="5.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="5.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="159.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="147.0" layoutY="159.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="5.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="195.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="147.0" layoutY="196.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="148.0" layoutY="237.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="236.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #800080; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="5.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="277.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #0000FF; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="6.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="148.0" layoutY="278.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="148.0" layoutY="312.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="311.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #0000FF; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="7.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="8.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="37.0" layoutY="346.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #0000FF; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="148.0" layoutY="346.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="37.0" layoutY="386.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #000080; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="8.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="44.0" layoutX="8.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/table.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="420.0" prefHeight="29.0" prefWidth="107.0" style="-fx-background-color: #000080; -fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssbutton.css" text="Tableau tache" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="149.0" layoutY="387.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="149.0" layoutY="420.0" text="i" textFill="#00c8ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="459.0" prefHeight="3.0" prefWidth="169.0" />
+            <Separator layoutX="1.0" layoutY="228.0" prefHeight="3.0" prefWidth="169.0" />
+            <Separator layoutX="1.0" layoutY="272.0" prefHeight="3.0" prefWidth="169.0" />
+            <Separator layoutX="1.0" layoutY="506.0" prefHeight="3.0" prefWidth="169.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="520.0" prefHeight="17.0" prefWidth="117.0" style="-fx-background-color: #BC8F8F; -fx-background-radius: 5em;" text="Ajoutter d'autres comptes" textAlignment="CENTER" textFill="#fcfcfc" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="128.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_plus_43px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="seConnecterEnLing" buttonType="RAISED" layoutX="36.0" layoutY="469.0" onAction="#EtreEnLinge" prefHeight="29.0" prefWidth="107.0" ripplerFill="#8e9a1c" style="-fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCss.css" text="Se Connecter" textFill="#1e00ff">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <effect>
+                  <Shadow color="#00d0ff" height="53.62" radius="19.6375" width="26.93" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="seDeconnecterEnLing1" buttonType="RAISED" layoutX="37.0" layoutY="468.0" onAction="#SortirEnLinge" prefHeight="29.0" prefWidth="107.0" ripplerFill="#8e9a1c" style="-fx-background-radius: 5em;" stylesheets="@../fichierCss/styleCssCasser.css" text="Se Deconnecter" textFill="#1e00ff">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <effect>
+                  <Shadow color="#00d0ff" height="53.62" radius="19.6375" width="26.93" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MainAccuile1" layoutX="794.0" layoutY="86.0" prefHeight="588.0" prefWidth="395.0" style="-fx-background-color: #000000; -fx-background-radius: 2em; -fx-border-color: #FFFACD; -fx-border-radius: 2em;">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="2.0" prefHeight="28.0" prefWidth="381.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 5em;">
+               <children>
+                  <Label layoutX="14.0" layoutY="6.0" text="Utilisateur" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="85.0" layoutY="8.0" text="Plan jour" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="8.0" text="Notification" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="233.0" layoutY="8.0" text="Tache" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="276.0" layoutY="6.0" text="Paramètre Tache" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="73.0" layoutY="31.0" prefHeight="71.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="344.0" layoutY="31.0" prefHeight="71.0" prefWidth="51.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="72.0" layoutY="104.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="362.0" layoutY="104.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="71.0" layoutY="150.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="362.0" layoutY="150.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="72.0" layoutY="196.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="362.0" layoutY="196.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="73.0" layoutY="242.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="362.0" layoutY="242.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="74.0" layoutY="288.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="362.0" layoutY="288.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="362.0" layoutY="334.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="362.0" layoutY="380.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="362.0" layoutY="426.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="362.0" layoutY="472.0" prefHeight="44.0" prefWidth="33.0" style="-fx-background-color: #00BFFF;" />
+            <AnchorPane layoutX="344.0" layoutY="518.0" prefHeight="71.0" prefWidth="51.0" style="-fx-background-color: #00BFFF; -fx-border-radius: 20em; -fx-background-radius: 1.5em;" />
+            <AnchorPane layoutX="73.0" layoutY="334.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="71.0" layoutY="380.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="72.0" layoutY="426.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="74.0" layoutY="472.0" prefHeight="44.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="74.0" layoutY="518.0" prefHeight="71.0" prefWidth="318.0" style="-fx-background-color: #00BFFF; -fx-background-radius: 10em;" />
+            <AnchorPane layoutX="1.0" layoutY="28.0" prefHeight="559.0" prefWidth="74.0" style="-fx-background-color: #20B2AA; -fx-background-radius: 2em;">
+               <children>
+                  <AnchorPane layoutX="20.0" layoutY="3.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #000000; -fx-background-radius: 20em; -fx-border-color: #FAE000; -fx-border-radius: 5em;">
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@../Icons/delete.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="22.0" layoutY="527.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #000000; -fx-background-radius: 20em; -fx-border-color: #FAE000; -fx-border-radius: 5em;">
+                     <children>
+                        <ImageView fx:id="demotrativeSense1" fitHeight="21.0" fitWidth="21.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/back_to.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Pane layoutX="22.0" layoutY="526.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: black; -fx-border-radius: 5em;">
+                     <children>
+                        <JFXHamburger fx:id="icon1" layoutX="6.0" layoutY="5.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: white;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXHamburger>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="3.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: black; -fx-border-radius: 5em;">
+                     <children>
+                        <JFXHamburger fx:id="icon11" layoutX="6.0" layoutY="5.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: white;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXHamburger>
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1216.0" layoutY="62.0" prefHeight="36.0" prefWidth="135.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 2em;">
+         <children>
+            <AnchorPane layoutX="101.0" layoutY="5.0" prefHeight="27.0" prefWidth="28.0" style="-fx-border-color: blue; -fx-background-color: #000000; -fx-background-radius: 5em; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="17.0" fitWidth="21.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/menu.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <HBox layoutX="11.0" layoutY="9.0" prefHeight="17.0" prefWidth="51.0">
+               <children>
+                  <Circle fill="#ff1f1f" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#4cff1f" radius="8.0" stroke="BLACK" strokeType="INSIDE" style="-fx-border-color: black;" />
+                  <Circle fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" style="-fx-border-color: black;" />
+               </children>
+            </HBox>
+            <AnchorPane layoutX="102.0" layoutY="3.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: #000000; -fx-background-radius: 20em; -fx-border-color: #FAE000; -fx-border-radius: 5em;">
+               <children>
+                  <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../Icons/delete.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <JFXDrawer fx:id="slider" defaultDrawerSize="160.0" miniDrawerSize="0.0" prefHeight="743.0" prefWidth="0.0" style="-fx-background-radius: 5em; -fx-background-color: rgb(150,0,0,0);" />
+      <Pane layoutX="1265.0" layoutY="658.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: black; -fx-border-radius: 5em;">
+         <children>
+            <JFXHamburger fx:id="icon" layoutX="6.0" layoutY="6.0" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXHamburger>
+         </children>
+      </Pane>
+      <Pane layoutX="1268.0" layoutY="31.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: black; -fx-border-radius: 5em;">
+         <children>
+            <ImageView fitHeight="19.0" fitWidth="21.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/hand_cursor.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

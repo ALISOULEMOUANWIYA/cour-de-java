@@ -1,0 +1,99 @@
+#AnchorPaneTotale{
+  -fx-background-color :  rgb(100,0, 0, 0);
+}
+#journerStyle0, #journerStyle1, #journerStyle2, #journerStyle3, #journerStyle4{
+	 -fx-background-color :  #4e4e4e;
+	 -fx-background-radius: 22;
+	 -fx-border-color: #ccf6f3;
+	 -fx-border-radius: 20;
+}
+#paneProfilleUtilisateur{
+	 -fx-background-color :  #4e4e4e;
+	 -fx-background-radius: 30;
+	 -fx-border-color: #ccf6f3;
+	 -fx-border-radius: 30;
+}
+#panePhotoCouverture{
+	 -fx-background-color:  #696969;
+	 -fx-background-radius: 30;
+	 -fx-border-color: #ccf6f3;
+	 -fx-border-radius: 30;
+}
+#paneSyleAcceuille{
+	 -fx-background-color:  #808080;
+	 -fx-background-radius: 22;
+	 -fx-border-color: #ccf6f3;
+	 -fx-border-radius: 20;
+}
+#paneNAvigation,
+#panenavigationInfoClique{
+	 -fx-background-color :  #4e4e4e;
+	 -fx-background-radius: 22;
+	 -fx-border-color: #ccf6f3;
+	 -fx-border-radius: 20;
+}
+
+#paneAceuilleInfo{
+	 -fx-background-color:  #808080;
+}
+#paneAcceillieUtilisateur,
+#paneNavigationIcones,
+#paneNavigationDroite{
+    -fx-background-color :  #353535;
+	-fx-background-radius:  2em;
+	-fx-border-radius: 2em;
+	-fx-border-color:  #FFFACD;
+}
+#labaleNomUtilisateur,
+#LabelUtilisateurNom{
+  -fx-Alignment:  Center;
+  -fx-text-fill: white;
+}
+#separateur{
+   -fx-background-color:  black;
+}
+#btnInformation{
+   -fx-background-color: rgb(250, 250, 250, 0.2);
+   -fx-background-radius: 22;
+   -fx-border-color: #ccf6f3;
+   -fx-border-radius: 20;
+}
+#btnInformation:hover{
+   -fx-background-color: #4058b1a8;
+   -fx-text-fill: white;
+   -fx-background-radius: 22;
+   -fx-border-color: #ccf6f3;
+   -fx-border-radius: 20;
+}
+#SyleBouton{
+   -fx-background-color: rgb(250, 250, 250, 0.2);
+   -fx-background-radius: 22;
+   -fx-border-color: #ccf6f3;
+   -fx-border-radius: 20;
+}
+#SyleBoutontransparent,
+#buttondeclancheurPane,
+#buttondeclancheurPane1,
+#buttondeclancheurPane2,
+#buttondeclancheurPane3,
+#buttondeclancheurPane4{
+  -fx-background-color: transparent;
+}
+#btniconenavigationJourne{
+	  -fx-background-color: transparent;
+}
+#btniconenavigationJourne:hover{
+	-fx-background-color: rgb(250, 250, 250, 0.2);
+ 	-fx-border-color: #ccf6f3;
+}
+#btniconenavigationJourne:pressed{
+	-fx-background-color: #B0E0E6;
+	 -fx-background-radius: 22;
+	 -fx-font-weight: bold;
+	 -fx-border-radius: 20;
+ 	-fx-border-color: #ccf6f3;
+}
+
+#btniconenavigationJourne:pressed > #iconenavigationJourne{
+ 	-fx-fill: #2F4F4F;
+}
